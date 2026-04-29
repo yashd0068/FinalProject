@@ -24,6 +24,7 @@ public class ResultsPage {
         PageFactory.initElements(driver, this);
     }
 
+
     public int getCheapestSUVPrice() {
 
         // Wait until prices are visible
