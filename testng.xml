@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="EaseMyTrip Automation Suite">
+    <test name="EaseMyTrip Test Cases">
+        <classes>
+            <class name="org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage"/>
+            <class name="org.easemytrip.tests.TC_02_NavigateToCabsAndSelectOutstation"/>
+            <class name="org.easemytrip.tests.TC_03_SelectFromAndToCities"/>
+            <class name="org.easemytrip.tests.TC_04_SearchAndApplySUVFilters"/>
+            <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>
+        </classes>
+    </test>
+</suite>
