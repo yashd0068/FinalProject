@@ -29,6 +29,7 @@ public class TC_01_LaunchAndVerifyHomePage extends BaseClass {
                 "Page did not load properly");
 
         ScreenshotUtil.takeScreenshot(driver, "TC01_03_HomePageVerified");
+
         System.out.println("Home page launched and verified successfully");
     }
 }

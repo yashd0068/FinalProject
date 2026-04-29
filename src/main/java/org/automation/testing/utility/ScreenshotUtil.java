@@ -16,6 +16,7 @@ public class ScreenshotUtil {
                     new File("screenshots/" + testName + ".png")
             );
         } catch (Exception e) {
+
             e.printStackTrace();
         }
     }

@@ -35,6 +35,7 @@ public class BaseClass {
             System.out.println("Screenshot captured for failed test");
         }
 
+
         driver.quit();
         System.out.println("Browser closed");
     }

@@ -33,6 +33,7 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
                 "FROM city not selected correctly");
 
         System.out.println("Select TO city: " + toCity);
+
         cabsPage.selectToCity(toCity);
         ScreenshotUtil.takeScreenshot(driver, "TC03_04_ToCitySelected");
 

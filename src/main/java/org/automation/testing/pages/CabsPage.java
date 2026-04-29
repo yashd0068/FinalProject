@@ -91,6 +91,7 @@ public class CabsPage {
 
     public void applySUVFilters() {
         wait.until(ExpectedConditions.elementToBeClickable(suvFilter)).click();
+
         wait.until(ExpectedConditions.elementToBeClickable(suvLuxuryFilter)).click();
     }
 }

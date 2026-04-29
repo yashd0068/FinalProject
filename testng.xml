@@ -9,6 +9,7 @@
             <class name="org.easemytrip.tests.TC_03_SelectFromAndToCities"/>
             <class name="org.easemytrip.tests.TC_04_SearchAndApplySUVFilters"/>
             <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>
+
         </classes>
     </test>
 </suite>

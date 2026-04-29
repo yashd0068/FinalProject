@@ -35,6 +35,7 @@ public class ResultsPage {
         for (WebElement price : suvPrices) {
 
             int value = Integer.parseInt(
+
                     price.getText()
                             .replace("₹", "")
                             .replace(",", "")

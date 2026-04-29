@@ -14,7 +14,9 @@ public class HomePage {
     WebDriver driver;
     WebDriverWait wait;
 
+
     @FindBy(linkText = "Cabs")
+
     private WebElement cabsLink;
 
     public HomePage(WebDriver driver) {

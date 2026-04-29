@@ -26,6 +26,7 @@ public class TC_04_SearchAndApplySUVFilters extends BaseClass {
         cabsPage.clickSearch();
 
         System.out.println("Apply SUV and SUV Luxury filters");
+
         cabsPage.applySUVFilters();
 
         System.out.println("Step 5: Validate results page loaded");

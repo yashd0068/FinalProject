@@ -10,6 +10,7 @@ public class Utility {
     static {
         try {
             FileInputStream fis =
+
                     new FileInputStream("src/test/resources/testData/config.properties");
             prop = new Properties();
             prop.load(fis);

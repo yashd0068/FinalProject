@@ -11,6 +11,7 @@ public class TC_02_NavigateToCabsAndSelectOutstation extends BaseClass {
     @Test
     public void navigateToCabsAndSelectOutstation() {
 
+
         HomePage homePage = new HomePage(driver);
         CabsPage cabsPage = new CabsPage(driver);
 
