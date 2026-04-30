@@ -1,7 +1,8 @@
 package org.automation.testing.baseclass;
 
-import org.automation.testing.utility.ScreenshotUtil;
 import org.automation.testing.utility.ConfigUtility;
+import org.automation.testing.utility.LogUtil;
+import org.automation.testing.utility.ScreenshotUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -23,6 +24,7 @@ public class BaseClass {
     public void setUp() {
 
         String browser = ConfigUtility.getProperty("browser").toLowerCase();
+        LogUtil.log("Launching browser: " + browser);
 
         switch (browser) {
 
@@ -31,7 +33,7 @@ public class BaseClass {
                 edgeOptions.addArguments("--disable-notifications");
                 edgeOptions.addArguments("--disable-popup-blocking");
                 driver = new EdgeDriver(edgeOptions);
-                System.out.println("Edge Browser launched");
+                LogUtil.log("Edge browser launched");
                 break;
 
             case "chrome":
@@ -41,7 +43,7 @@ public class BaseClass {
                 chromeOptions.addArguments("--disable-popup-blocking");
                 // chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
-                System.out.println("Chrome Browser launched");
+                LogUtil.log("Chrome browser launched");
                 break;
         }
 
@@ -49,7 +51,10 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-        driver.get(ConfigUtility.getProperty("url"));
+
+        String url = ConfigUtility.getProperty("url");
+        LogUtil.log("Navigating to application URL: " + url);
+        driver.get(url);
     }
 
     @AfterMethod
@@ -57,12 +62,12 @@ public class BaseClass {
 
         if (result.getStatus() == ITestResult.FAILURE) {
             ScreenshotUtil.takeScreenshot(driver, result.getName());
-            System.out.println("Screenshot captured for failed test");
+            LogUtil.log("Screenshot captured for failed test: " + result.getName());
         }
 
         if (driver != null) {
             driver.quit();
-            System.out.println("Browser closed");
+            LogUtil.log("Browser closed");
         }
     }
 }

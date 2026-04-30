@@ -3,7 +3,8 @@ package org.easemytrip.tests;
 import org.automation.testing.baseclass.BaseClass;
 import org.automation.testing.pages.CabsPage;
 import org.automation.testing.pages.HomePage;
-import org.automation.testing.utility.Utility;
+import org.automation.testing.utility.ConfigUtility;
+import org.automation.testing.utility.LogUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -15,24 +16,33 @@ public class TC_04_SearchAndApplySUVFilters extends BaseClass {
         HomePage homePage = new HomePage(driver);
         CabsPage cabsPage = new CabsPage(driver);
 
+        LogUtil.log("Clicking on Cabs module");
         homePage.clickOnCabs();
+
+        LogUtil.log("Selecting Outstation travel type");
         cabsPage.selectOutstation();
 
-        System.out.println("Selected FROM and TO cities");
-        cabsPage.selectFromCity(Utility.getProperty("fromCity"));
-        cabsPage.selectToCity(Utility.getProperty("toCity"));
+        String fromCity = ConfigUtility.getProperty("fromCity");
+        String toCity = ConfigUtility.getProperty("toCity");
 
-        System.out.println("Clicked Search button");
+        LogUtil.log("Selecting FROM city: " + fromCity);
+        cabsPage.selectFromCity(fromCity);
+
+        LogUtil.log("Selecting TO city: " + toCity);
+        cabsPage.selectToCity(toCity);
+
+        LogUtil.log("Clicking Search button");
         cabsPage.clickSearch();
 
-        System.out.println("Apply SUV and SUV Luxury filters");
-
+        LogUtil.log("Applying SUV filters");
         cabsPage.applySUVFilters();
 
-        System.out.println("Step 5: Validate results page loaded");
-        Assert.assertTrue(driver.getPageSource().contains("Book Now"),
-                "Cab results page not loaded");
+        LogUtil.log("Validating results page loaded");
+        Assert.assertTrue(
+                driver.getPageSource().contains("Book Now"),
+                "Cab results page not loaded"
+        );
 
-        System.out.println("Search executed and SUV filters applied successfully");
+        LogUtil.log("Search executed and SUV filters applied successfully");
     }
 }
