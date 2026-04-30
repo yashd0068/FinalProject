@@ -21,7 +21,6 @@ public class TC_05_FindAndValidateCheapestSUV extends BaseClass {
         cabs.selectOutstation();
 
         cabs.selectFromCity(Utility.getProperty("fromCity"));
-
         cabs.selectToCity(Utility.getProperty("toCity"));
 
         cabs.clickSearch();
