@@ -155,7 +155,17 @@ public class GiftCardFormPage {
         }
         return false;
     }
-
+    public String getAmountBoundaryErrorMessage() {
+        for (WebElement err : errorMessages) {
+            String message = err.getText().trim();
+            if (!message.isEmpty()
+                    && message.toLowerCase().contains("between")
+                    && message.toLowerCase().contains("and")) {
+                return message;
+            }
+        }
+        return "No amount boundary error message displayed";
+    }
     public void fillMandatoryFieldsExceptEmail() {
         enterAmount("500");
         selectQuantity("1");
