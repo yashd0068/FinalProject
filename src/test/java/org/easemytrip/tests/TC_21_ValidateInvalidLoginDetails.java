@@ -55,7 +55,6 @@ public class TC_21_ValidateInvalidLoginDetails extends BaseClass {
                             " | Actual error: " + actualError
             );
 
-            // Prevent Angular / DOM reuse issues
             loginPage.clearExistingErrors();
         }
 

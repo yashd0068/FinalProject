@@ -5,18 +5,37 @@ import org.automation.testing.pages.HotelsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class TC_18_DecrementAdultByOne extends BaseClass {
 
     @Test
-    public void decrementAdultByOne() {
+    public void decrementAdultByOneAndValidateConsistency() {
+
         HotelsPage hotels = new HotelsPage(driver);
+
         hotels.openHotels();
         hotels.openAdultDropdown();
 
-        int before = hotels.getAdultCount();
-        hotels.decrementAdult(1);
-        int after = hotels.getAdultCount();
+        int initialCount = hotels.getAdultCount();
+        Assert.assertTrue(initialCount > 1,
+                "Initial adult count must be greater than 1 to validate decrement");
 
-        Assert.assertEquals(after, before - 1);
+        hotels.decrementAdult(1);
+
+        int updatedCount = hotels.getAdultCount();
+        Assert.assertEquals(updatedCount, initialCount - 1,
+                "Adult count did not decrement by one");
+
+        hotels.decrementAdult(1);
+        int secondUpdate = hotels.getAdultCount();
+        Assert.assertEquals(secondUpdate, updatedCount - 1,
+                "Subsequent decrement did not work correctly");
+
+        List<Integer> roomCounts = hotels.getAllAdultCounts();
+        for (Integer count : roomCounts) {
+            Assert.assertEquals(count.intValue(), secondUpdate,
+                    "Adult count mismatch across rooms after decrement");
+        }
     }
 }
