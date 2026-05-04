@@ -4,12 +4,22 @@
 <suite name="EaseMyTrip Automation Suite">
     <test name="EaseMyTrip Test Cases">
         <classes>
+            <!-- Existing Cabs Test Cases -->
             <class name="org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage"/>
             <class name="org.easemytrip.tests.TC_02_NavigateToCabsAndSelectOutstation"/>
             <class name="org.easemytrip.tests.TC_03_SelectFromAndToCities"/>
             <class name="org.easemytrip.tests.TC_04_SearchAndApplySUVFilters"/>
             <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>
 
+            <!-- New Hotels - Adult Count Test Cases -->
+            <class name="org.easemytrip.tests.TC_06_VerifyAdultDropdownOpened"/>
+            <class name="org.easemytrip.tests.TC_07_ExtractAdultCounts"/>
+            <class name="org.easemytrip.tests.TC_08_VerifyAdultNotZero"/>
+            <class name="org.easemytrip.tests.TC_09_IncrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_10_IncrementAdultByMultiple"/>
+            <class name="org.easemytrip.tests.TC_11_DecrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_12_VerifyAdultDoesNotGoBelowOne"/>
+            <class name="org.easemytrip.tests.TC_13_ValidateFinalAdultCount"/>
         </classes>
     </test>
 </suite>
