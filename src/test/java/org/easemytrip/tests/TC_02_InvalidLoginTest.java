@@ -3,7 +3,7 @@ package org.easemytrip.tests;
 import org.automation.testing.baseclass.BaseClass;
 import org.automation.testing.utility.ExcelReader;
 import org.automation.testing.utility.LogUtil;
-import org.easemytrip.pages.LoginPage;
+import org.automation.testing.pages.LoginPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -12,8 +12,8 @@ import java.util.List;
 
 public class TC_02_InvalidLoginTest extends BaseClass {
 
-    LoginPage loginPage;
-    SoftAssert softAssert;
+    private LoginPage loginPage;
+    private SoftAssert softAssert;
 
     @BeforeMethod
     public void initialize() {
@@ -51,15 +51,13 @@ public class TC_02_InvalidLoginTest extends BaseClass {
             softAssert.assertTrue(
                     actualError.toLowerCase().contains(expectedKeyword.toLowerCase()),
                     "Validation failed for input: " + inputValue +
-                            " | Expected keyword: " + expectedKeyword +
-                            " | Actual error: " + actualError
+                            " | Expected: " + expectedKeyword +
+                            " | Actual: " + actualError
             );
 
-            // ✅ Important to avoid Angular reuse issues
             loginPage.clearExistingErrors();
         }
 
-        // ✅ MUST be called, otherwise failures are ignored
         softAssert.assertAll();
     }
 }
