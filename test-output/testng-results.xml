@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-04T17:15:45 IST" name="EaseMyTrip Automation Suite" finished-at="2026-05-04T17:15:56 IST" duration-ms="10307">
+    <groups>
+    </groups>
+    <test started-at="2026-05-04T17:15:45 IST" name="EaseMyTrip Test Cases" finished-at="2026-05-04T17:15:56 IST" duration-ms="10307">
+      <class name="org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage@6cf0e0ba]" started-at="2026-05-04T17:15:45 IST" name="setUp" finished-at="2026-05-04T17:15:52 IST" duration-ms="6248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyEaseMyTripHomePage()[pri:0, instance:org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage@6cf0e0ba]" started-at="2026-05-04T17:15:52 IST" name="verifyEaseMyTripHomePage" finished-at="2026-05-04T17:15:52 IST" duration-ms="824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEaseMyTripHomePage -->
+        <test-method is-config="true" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage@6cf0e0ba]" started-at="2026-05-04T17:15:52 IST" name="tearDown" finished-at="2026-05-04T17:15:56 IST" duration-ms="3199" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyEaseMyTripHomePage status=SUCCESS method=TC_01_LaunchAndVerifyHomePage.verifyEaseMyTripHomePage()[pri:0, instance:org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage@6cf0e0ba] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage -->
+    </test> <!-- EaseMyTrip Test Cases -->
+  </suite> <!-- EaseMyTrip Automation Suite -->
+</testng-results>

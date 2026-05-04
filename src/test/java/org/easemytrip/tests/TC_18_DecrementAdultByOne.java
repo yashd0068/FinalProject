@@ -22,19 +22,20 @@ public class TC_18_DecrementAdultByOne extends BaseClass {
                 "Initial adult count must be greater than 1 to validate decrement");
 
         hotels.decrementAdult(1);
+        int afterFirstDecrement = hotels.getAdultCount();
 
-        int updatedCount = hotels.getAdultCount();
-        Assert.assertEquals(updatedCount, initialCount - 1,
+        Assert.assertEquals(afterFirstDecrement, initialCount - 1,
                 "Adult count did not decrement by one");
 
         hotels.decrementAdult(1);
-        int secondUpdate = hotels.getAdultCount();
-        Assert.assertEquals(secondUpdate, updatedCount - 1,
-                "Subsequent decrement did not work correctly");
+        int afterSecondDecrement = hotels.getAdultCount();
+
+        Assert.assertEquals(afterSecondDecrement, 1,
+                "Adult count should not go below minimum allowed value (1)");
 
         List<Integer> roomCounts = hotels.getAllAdultCounts();
         for (Integer count : roomCounts) {
-            Assert.assertEquals(count.intValue(), secondUpdate,
+            Assert.assertEquals(count.intValue(), afterSecondDecrement,
                     "Adult count mismatch across rooms after decrement");
         }
     }

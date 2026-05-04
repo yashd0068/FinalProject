@@ -1,6 +1,7 @@
 package org.automation.testing.pages;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -8,8 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class
-CabsPage {
+public class CabsPage {
 
     WebDriver driver;
     WebDriverWait wait;
@@ -51,6 +51,7 @@ CabsPage {
         wait.until(ExpectedConditions.elementToBeClickable(fromInput)).clear();
         fromInput.sendKeys(city);
 
+        waitForAutoSuggestToLoad();
         selectCityFromAutoSuggest(city);
     }
 
@@ -59,27 +60,36 @@ CabsPage {
         wait.until(ExpectedConditions.elementToBeClickable(toInput)).clear();
         toInput.sendKeys(city);
 
+        waitForAutoSuggestToLoad();
         selectCityFromAutoSuggest(city);
+    }
+
+    private void waitForAutoSuggestToLoad() {
+        wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.xpath("//div[contains(@class,'auto_sugg')]")
+        ));
     }
 
     private void selectCityFromAutoSuggest(String city) {
 
         By cityOption = By.xpath(
-                "//div[contains(@class,'auto_sugg_tttl') and normalize-space()='" + city + "']"
+                "//div[contains(@class,'auto_sugg_tttl') and normalize-space()='"
+                        + city + "']"
         );
 
         int attempts = 0;
 
         while (attempts < 3) {
             try {
-                WebDriverWait retryWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-                retryWait
-                        .ignoring(StaleElementReferenceException.class)
-                        .until(ExpectedConditions.elementToBeClickable(cityOption))
-                        .click();
+                WebElement element = wait.until(
+                        ExpectedConditions.refreshed(
+                                ExpectedConditions.elementToBeClickable(cityOption)
+                        )
+                );
+                element.click();
                 return;
 
-            } catch (TimeoutException e) {
+            } catch (StaleElementReferenceException | TimeoutException e) {
                 attempts++;
             }
         }
@@ -92,8 +102,8 @@ CabsPage {
     }
 
     public void applySUVFilters() {
-        wait.until(ExpectedConditions.elementToBeClickable(suvFilter)).click();
 
+        wait.until(ExpectedConditions.elementToBeClickable(suvFilter)).click();
         wait.until(ExpectedConditions.elementToBeClickable(suvLuxuryFilter)).click();
     }
 }
