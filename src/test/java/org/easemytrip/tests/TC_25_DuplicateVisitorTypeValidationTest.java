@@ -6,6 +6,8 @@ import org.automation.testing.utility.LogUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class TC_25_DuplicateVisitorTypeValidationTest extends BaseClass {
@@ -18,18 +20,20 @@ public class TC_25_DuplicateVisitorTypeValidationTest extends BaseClass {
         MonumentsPage monumentsPage = new MonumentsPage(driver, wait);
 
         monumentsPage.openMonumentsPage();
-
         monumentsPage.searchMonument("taj");
-
         monumentsPage.openTicketsTab();
 
         int ticketBoxCount = monumentsPage.getDisplayedTicketCount();
-        Set<String> visitorTypes = monumentsPage.getVisitorTypes();
+
+        List<String> visitorTypeList = monumentsPage.getVisitorTypes();
+
+        Set<String> uniqueVisitorTypes = new HashSet<>(visitorTypeList);
 
         LogUtil.log("Total ticket boxes displayed: " + ticketBoxCount);
-        LogUtil.log("Unique visitor types found: " + visitorTypes.size());
+        LogUtil.log("Visitor types found (List): " + visitorTypeList);
+        LogUtil.log("Unique visitor types found (Set): " + uniqueVisitorTypes);
 
-        Assert.assertEquals(visitorTypes.size(), ticketBoxCount,
+        Assert.assertEquals(uniqueVisitorTypes.size(), ticketBoxCount,
                 "Duplicate visitor types found in Tickets section");
 
         LogUtil.log("Duplicate visitor type validation completed successfully");

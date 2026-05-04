@@ -2,16 +2,17 @@ package org.automation.testing.pages;
 
 import org.automation.testing.utility.LogUtil;
 import org.automation.testing.utility.WindowSwitchUtil;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import java.util.stream.Collectors;
 
 public class MonumentsPage {
 
@@ -53,7 +54,6 @@ public class MonumentsPage {
     public void openMonumentsPage() {
 
         LogUtil.log("Hovering on More menu");
-
         wait.until(ExpectedConditions.visibilityOf(moreMenu));
         new Actions(driver).moveToElement(moreMenu).perform();
 
@@ -67,7 +67,6 @@ public class MonumentsPage {
     public void searchMonument(String monumentName) {
 
         LogUtil.log("Typing monument name: " + monumentName);
-
         wait.until(ExpectedConditions.visibilityOf(searchBox));
         searchBox.clear();
         searchBox.sendKeys(monumentName);
@@ -90,31 +89,26 @@ public class MonumentsPage {
         return ticketBoxes.size();
     }
 
-    public Set<String> getVisitorTypes() {
+    public List<String> getVisitorTypes() {
 
-        Set<String> visitorTypes = new HashSet<>();
         LogUtil.log("Fetching visitor types");
 
-        for (WebElement box : ticketBoxes) {
-            String type = box.findElement(
-                    By.xpath(".//div[contains(@class,'tbttl')]")
-            ).getText().trim();
-            visitorTypes.add(type);
-        }
-        return visitorTypes;
+        return ticketBoxes.stream()
+                .map(box -> box.findElement(
+                        By.xpath(".//div[contains(@class,'tbttl')]")
+                ).getText().trim())
+                .collect(Collectors.toList());
     }
 
-    public Set<String> getTicketPrices() {
+    public List<String> getTicketPrices() {
 
-        Set<String> prices = new HashSet<>();
         LogUtil.log("Fetching ticket prices");
 
-        for (WebElement box : ticketBoxes) {
-            String price = box.findElement(
-                    By.xpath(".//div[contains(@class,'tctprc')]//span")
-            ).getText().trim();
-            prices.add(price);
-        }
-        return prices;
+        return ticketBoxes.stream()
+                .map(box -> box.findElement(
+                        By.xpath(".//div[contains(@class,'tctprc')]//span")
+                ).getText().trim())
+                .map(price -> price.replaceAll("\\D", "")) // remove ₹ and text
+                .collect(Collectors.toList());
     }
 }
