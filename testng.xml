@@ -12,14 +12,14 @@
             <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>
 
             <!-- New Hotels - Adult Count Test Cases -->
-            <class name="org.easemytrip.tests.TC_06_VerifyAdultDropdownOpened"/>
-            <class name="org.easemytrip.tests.TC_07_ExtractAdultCounts"/>
-            <class name="org.easemytrip.tests.TC_08_VerifyAdultNotZero"/>
-            <class name="org.easemytrip.tests.TC_09_IncrementAdultByOne"/>
-            <class name="org.easemytrip.tests.TC_10_IncrementAdultByMultiple"/>
-            <class name="org.easemytrip.tests.TC_11_DecrementAdultByOne"/>
-            <class name="org.easemytrip.tests.TC_12_VerifyAdultDoesNotGoBelowOne"/>
-            <class name="org.easemytrip.tests.TC_13_ValidateFinalAdultCount"/>
+            <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>
+            <class name="org.easemytrip.tests.TC_14_ExtractAdultCounts"/>
+            <class name="org.easemytrip.tests.TC_15_VerifyAdultNotZero"/>
+            <class name="org.easemytrip.tests.TC_16_IncrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_17_IncrementAdultByMultiple"/>
+            <class name="org.easemytrip.tests.TC_18_DecrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_19_VerifyAdultDoesNotGoBelowOne"/>
+            <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>
         </classes>
     </test>
 </suite>

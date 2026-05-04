@@ -7,7 +7,7 @@ import org.automation.testing.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_13_ValidatePayableAmount extends BaseClass {
+public class TC_12_ValidatePayableAmount extends BaseClass {
 
     @Test
     public void validateAndDisplayPayableAmount() {

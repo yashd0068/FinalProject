@@ -5,15 +5,15 @@ import org.automation.testing.pages.HotelsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_08_VerifyAdultNotZero extends BaseClass {
+public class TC_20_ValidateFinalAdultCount extends BaseClass {
 
     @Test
-    public void verifyAdultNotZero() {
+    public void validateFinalAdultCount() {
         HotelsPage hotels = new HotelsPage(driver);
         hotels.openHotels();
         hotels.openAdultDropdown();
 
-        Assert.assertTrue(hotels.getAdultCount() > 0,
-                "Adult count is ZERO");
+        Assert.assertTrue(hotels.getAdultCount() >= 1,
+                "Final adult count invalid");
     }
 }

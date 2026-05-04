@@ -28,3 +28,4 @@ public class TC_11_ReceiverEmailValidation extends BaseClass {
         Assert.assertTrue(message.toLowerCase().contains("invalid receiver email"));
     }
 }
+

@@ -5,17 +5,18 @@ import org.automation.testing.pages.HotelsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_12_VerifyAdultDoesNotGoBelowOne extends BaseClass {
+public class TC_18_DecrementAdultByOne extends BaseClass {
 
     @Test
-    public void verifyAdultDoesNotGoBelowOne() {
+    public void decrementAdultByOne() {
         HotelsPage hotels = new HotelsPage(driver);
         hotels.openHotels();
         hotels.openAdultDropdown();
 
-        hotels.decrementAdult(10);
+        int before = hotels.getAdultCount();
+        hotels.decrementAdult(1);
+        int after = hotels.getAdultCount();
 
-        Assert.assertTrue(hotels.getAdultCount() >= 1,
-                "Adult count went below one");
+        Assert.assertEquals(after, before - 1);
     }
 }

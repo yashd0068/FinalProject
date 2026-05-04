@@ -5,18 +5,18 @@ import org.automation.testing.pages.HotelsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TC_11_DecrementAdultByOne extends BaseClass {
+public class TC_17_IncrementAdultByMultiple extends BaseClass {
 
     @Test
-    public void decrementAdultByOne() {
+    public void incrementAdultByMultiple() {
         HotelsPage hotels = new HotelsPage(driver);
         hotels.openHotels();
         hotels.openAdultDropdown();
 
         int before = hotels.getAdultCount();
-        hotels.decrementAdult(1);
+        hotels.incrementAdult(2);
         int after = hotels.getAdultCount();
 
-        Assert.assertEquals(after, before - 1);
+        Assert.assertEquals(after, before + 2);
     }
 }
