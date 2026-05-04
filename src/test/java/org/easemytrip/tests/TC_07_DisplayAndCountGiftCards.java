@@ -13,12 +13,10 @@ public class TC_07_DisplayAndCountGiftCards extends BaseClass {
     @Test
     public void DisplayAndCountGiftCards() {
 
-
         HomePage home = new HomePage(driver);
 
         LogUtil.log("Navigating to Gift Cards page");
         home.clickOnGiftCards();
-
 
         GiftCardPage gift = new GiftCardPage(driver);
 
