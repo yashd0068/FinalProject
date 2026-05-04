@@ -60,7 +60,7 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
                         "Validation Failed: Error message displayed for valid amount " + amount
                 );
 
-                LogUtil.log("✅ Test Passed for valid amount: " + amount);
+                LogUtil.log("Test Passed for valid amount: " + amount);
 
             } else {
 
@@ -69,7 +69,7 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
                         "Validation Failed: Error message NOT displayed for invalid amount " + amount
                 );
 
-                LogUtil.log("✅ Test Passed for invalid amount: " + amount);
+                LogUtil.log("Test Passed for invalid amount: " + amount);
             }
         }
 

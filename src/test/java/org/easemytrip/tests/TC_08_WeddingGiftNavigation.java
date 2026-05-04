@@ -25,7 +25,6 @@ public class TC_08_WeddingGiftNavigation extends BaseClass {
         LogUtil.log("Validating Wedding Gift card form is displayed");
         String pageSource = driver.getPageSource().toLowerCase();
 
-        // Standard assertion to confirm navigation & form visibility
         Assert.assertTrue(
                 pageSource.contains("sender"),
                 "Assertion Failed: Wedding Gift card form is not displayed after navigation"
