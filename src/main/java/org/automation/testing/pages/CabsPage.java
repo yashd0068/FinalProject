@@ -72,14 +72,15 @@ CabsPage {
 
         while (attempts < 3) {
             try {
-                wait.until(ExpectedConditions.presenceOfElementLocated(cityOption));
-                wait.until(ExpectedConditions.elementToBeClickable(cityOption)).click();
+                WebDriverWait retryWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+                retryWait
+                        .ignoring(StaleElementReferenceException.class)
+                        .until(ExpectedConditions.elementToBeClickable(cityOption))
+                        .click();
                 return;
-            } catch (StaleElementReferenceException | TimeoutException e) {
+
+            } catch (TimeoutException e) {
                 attempts++;
-                try {
-                    Thread.sleep(500); // small pause before retry
-                } catch (InterruptedException ignored) {}
             }
         }
 

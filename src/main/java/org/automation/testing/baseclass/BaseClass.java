@@ -32,6 +32,7 @@ public class BaseClass {
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--disable-notifications");
                 edgeOptions.addArguments("--disable-popup-blocking");
+               // edgeOptions.addArguments("--headless=new");
                 driver = new EdgeDriver(edgeOptions);
                 LogUtil.log("Edge browser launched");
                 break;
@@ -41,7 +42,7 @@ public class BaseClass {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--disable-notifications");
                 chromeOptions.addArguments("--disable-popup-blocking");
-                // chromeOptions.addArguments("--headless=new");
+               // chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
                 LogUtil.log("Chrome browser launched");
                 break;

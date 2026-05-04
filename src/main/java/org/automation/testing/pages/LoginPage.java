@@ -1,7 +1,9 @@
-package org.easemytrip.pages;
+package org.automation.testing.pages;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -10,89 +12,65 @@ public class LoginPage {
     private WebDriver driver;
     private WebDriverWait wait;
 
-    // ================== CONSTRUCTOR ==================
     public LoginPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
+        PageFactory.initElements(driver, this);
     }
 
-    // ================== LOCATORS ==================
+    @FindBy(css = "a._btnclick")
+    private WebElement loginHoverBtn;
 
-    private By loginHoverBtn = By.cssSelector("a._btnclick");
-    private By customerLogin = By.xpath("//span[@id='shwlogn']/ancestor::a");
-    private By loginInput = By.id("txtEmail");
-    private By continueBtn = By.id("shwotp");
+    @FindBy(xpath = "//span[@id='shwlogn']/ancestor::a")
+    private WebElement customerLogin;
 
-    /*
-     * Error containers (Angular toggles display:none)
-     */
-    private By anyVisibleError = By.xpath(
+    @FindBy(id = "txtEmail")
+    private WebElement loginInput;
+
+    @FindBy(id = "shwotp")
+    private WebElement continueBtn;
+
+    @FindBy(xpath =
             "//*[@id='RegValidPhone' and not(contains(@style,'display: none'))] | " +
                     "//*[@id='RegValidEmail' and not(contains(@style,'display: none'))] | " +
                     "//*[@id='RegValidEmPh'  and not(contains(@style,'display: none'))]"
-    );
+    )
+    private WebElement anyVisibleError;
 
-    // ================== PAGE ACTIONS ==================
-
-    /**
-     * Opens login popup by hovering and clicking customer login
-     */
     public void openLoginPopup() {
 
-        WebElement loginBtn =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(loginHoverBtn));
-
-        new Actions(driver).moveToElement(loginBtn).perform();
+        wait.until(ExpectedConditions.visibilityOf(loginHoverBtn));
+        new Actions(driver).moveToElement(loginHoverBtn).perform();
 
         wait.until(ExpectedConditions.elementToBeClickable(customerLogin)).click();
     }
 
-    /**
-     * Enters value into Email / Phone input
-     */
     public void enterValue(String value) {
 
-        WebElement input =
-                wait.until(ExpectedConditions.visibilityOfElementLocated(loginInput));
-
-        input.clear();
-        input.sendKeys(value);
+        wait.until(ExpectedConditions.visibilityOf(loginInput));
+        loginInput.clear();
+        loginInput.sendKeys(value);
     }
 
-    /**
-     * Clicks on Continue button (handles Angular disabled state)
-     */
     public void clickContinue() {
 
-        WebElement btn = driver.findElement(continueBtn);
+        wait.until(ExpectedConditions.visibilityOf(continueBtn));
 
-        ((JavascriptExecutor) driver)
-                .executeScript("arguments[0].removeAttribute('disabled');", btn);
-
-        btn.click();
+        ((JavascriptExecutor) driver).executeScript(
+                "arguments[0].removeAttribute('disabled'); arguments[0].click();",
+                continueBtn
+        );
     }
 
-    /**
-     * Returns the currently visible validation error
-     * (Phone / Email / Email-or-Phone)
-     */
     public String getErrorMessage() {
-
         try {
-            WebElement error =
-                    wait.until(ExpectedConditions.visibilityOfElementLocated(anyVisibleError));
-
-            return error.getText().trim();
-
+            wait.until(ExpectedConditions.visibilityOf(anyVisibleError));
+            return anyVisibleError.getText().trim();
         } catch (TimeoutException e) {
             return "Not displayed";
         }
     }
 
-    /**
-     * Clears error messages using JS
-     * (Prevents Angular wait hang in loops)
-     */
     public void clearExistingErrors() {
 
         ((JavascriptExecutor) driver).executeScript(

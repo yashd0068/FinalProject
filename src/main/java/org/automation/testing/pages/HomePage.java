@@ -17,9 +17,9 @@ public class HomePage {
 
     @FindBy(linkText = "Cabs")
     private WebElement cabsLink;
+
     @FindBy(xpath = "//span[text()='Gift Cards']")
     private WebElement giftCardLink;
-
 
     public HomePage(WebDriver driver) {
         this.driver = driver;
