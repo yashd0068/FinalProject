@@ -34,6 +34,6 @@ public class TC_07_DisplayAndCountGiftCards extends BaseClass {
         gift.printGiftCardNames();
 
         LogUtil.log("Gift Cards display and count validation successful");
-        ScreenshotUtil.takeScreenshot(driver, "TC07_DisplayGiftCards");
+//        ScreenshotUtil.takeScreenshot(driver, "TC07_DisplayGiftCards");
     }
 }

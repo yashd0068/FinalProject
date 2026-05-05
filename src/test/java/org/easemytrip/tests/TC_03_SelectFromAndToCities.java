@@ -19,18 +19,18 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
 
         LogUtil.log("Clicking on Cabs module");
         homePage.clickOnCabs();
-        ScreenshotUtil.takeScreenshot(driver, "TC03_01_CabsPageOpened");
+//        ScreenshotUtil.takeScreenshot(driver, "TC03_01_CabsPageOpened");
 
         LogUtil.log("Selecting Outstation travel type");
         cabsPage.selectOutstation();
-        ScreenshotUtil.takeScreenshot(driver, "TC03_02_OutstationSelected");
+//        ScreenshotUtil.takeScreenshot(driver, "TC03_02_OutstationSelected");
 
         String fromCity = ConfigUtility.getProperty("fromCity");
         String toCity = ConfigUtility.getProperty("toCity");
 
         LogUtil.log("Selecting FROM city: " + fromCity);
         cabsPage.selectFromCity(fromCity);
-        ScreenshotUtil.takeScreenshot(driver, "TC03_03_FromCitySelected");
+//        ScreenshotUtil.takeScreenshot(driver, "TC03_03_FromCitySelected");
 
         Assert.assertTrue(
                 driver.getPageSource().toLowerCase().contains(fromCity.toLowerCase()),
@@ -39,7 +39,7 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
 
         LogUtil.log("Selecting TO city: " + toCity);
         cabsPage.selectToCity(toCity);
-        ScreenshotUtil.takeScreenshot(driver, "TC03_04_ToCitySelected");
+//        ScreenshotUtil.takeScreenshot(driver, "TC03_04_ToCitySelected");
 
         Assert.assertTrue(
                 driver.getPageSource().toLowerCase().contains(toCity.toLowerCase()),

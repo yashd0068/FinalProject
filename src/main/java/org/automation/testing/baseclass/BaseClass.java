@@ -32,7 +32,7 @@ public class BaseClass {
                 EdgeOptions edgeOptions = new EdgeOptions();
                 edgeOptions.addArguments("--disable-notifications");
                 edgeOptions.addArguments("--disable-popup-blocking");
-               // edgeOptions.addArguments("--headless=new");
+                // edgeOptions.addArguments("--headless=new");
                 driver = new EdgeDriver(edgeOptions);
                 LogUtil.log("Edge browser launched");
                 break;
@@ -42,7 +42,7 @@ public class BaseClass {
                 ChromeOptions chromeOptions = new ChromeOptions();
                 chromeOptions.addArguments("--disable-notifications");
                 chromeOptions.addArguments("--disable-popup-blocking");
-               // chromeOptions.addArguments("--headless=new");
+                // chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
                 LogUtil.log("Chrome browser launched");
                 break;
@@ -61,8 +61,21 @@ public class BaseClass {
     @AfterMethod
     public void tearDown(ITestResult result) {
 
-        if (result.getStatus() == ITestResult.FAILURE) {
-            ScreenshotUtil.takeScreenshot(driver, result.getName());
+        if (result.getStatus() == ITestResult.SUCCESS) {
+            ScreenshotUtil.takeScreenshot(
+                    driver,
+                    result.getName(),
+                    "passed"
+            );
+            LogUtil.log("Screenshot captured for passed test: " + result.getName());
+        }
+
+        else if (result.getStatus() == ITestResult.FAILURE) {
+            ScreenshotUtil.takeScreenshot(
+                    driver,
+                    result.getName(),
+                    "failed"
+            );
             LogUtil.log("Screenshot captured for failed test: " + result.getName());
         }
 

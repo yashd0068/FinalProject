@@ -13,14 +13,14 @@ public class TC_01_LaunchAndVerifyHomePage extends BaseClass {
 
         LogUtil.log("Verifying application URL");
         String currentUrl = driver.getCurrentUrl();
-        ScreenshotUtil.takeScreenshot(driver, "TC01_01_ApplicationLaunched");
+//        ScreenshotUtil.takeScreenshot(driver, "TC01_01_ApplicationLaunched");
 
         Assert.assertTrue(currentUrl.contains("easemytrip"),
                 "Application URL validation failed");
 
         LogUtil.log("Verifying page title");
         String title = driver.getTitle();
-        ScreenshotUtil.takeScreenshot(driver, "TC01_02_HomePageTitle");
+//        ScreenshotUtil.takeScreenshot(driver, "TC01_02_HomePageTitle");
 
         Assert.assertTrue(title.contains("EaseMyTrip"),
                 "Home page title validation failed");
@@ -29,7 +29,7 @@ public class TC_01_LaunchAndVerifyHomePage extends BaseClass {
         Assert.assertTrue(title.length() > 5,
                 "Page did not load properly");
 
-        ScreenshotUtil.takeScreenshot(driver, "TC01_03_HomePageVerified");
+//        ScreenshotUtil.takeScreenshot(driver, "TC01_03_HomePageVerified");
 
         LogUtil.log("Home page launched and verified successfully");
     }
