@@ -37,6 +37,7 @@ public class TC_18_DecrementAdultByOne extends BaseClass {
         for (Integer count : roomCounts) {
             Assert.assertEquals(count.intValue(), afterSecondDecrement,
                     "Adult count mismatch across rooms after decrement");
+
         }
     }
 }
