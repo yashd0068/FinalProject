@@ -26,7 +26,6 @@ public class ResultsPage {
 
     public int getCheapestSUVPrice() {
 
-        // Wait until prices are visible
         wait.until(ExpectedConditions.visibilityOfAllElements(suvPrices));
 
         int lowest = Integer.MAX_VALUE;

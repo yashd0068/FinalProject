@@ -18,10 +18,18 @@ public class TestListener extends BaseClass implements ITestListener {
 
     @Override
     public void onTestStart(ITestResult result) {
+
+        String testName = result.getTestClass().getName()
+                + " : "
+                + result.getMethod().getMethodName();
+
+        String description = result.getMethod().getDescription();
+
         ExtentTestManager.setTest(
-                extent.createTest(result.getMethod().getMethodName())
+                extent.createTest(testName, description)
         );
     }
+
 
     @Override
     public void onTestSuccess(ITestResult result) {

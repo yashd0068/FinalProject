@@ -41,7 +41,6 @@ public class LoginPage {
 
         wait.until(ExpectedConditions.visibilityOf(loginHoverBtn));
         new Actions(driver).moveToElement(loginHoverBtn).perform();
-
         wait.until(ExpectedConditions.elementToBeClickable(customerLogin)).click();
     }
 

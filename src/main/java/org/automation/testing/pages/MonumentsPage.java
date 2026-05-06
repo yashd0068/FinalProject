@@ -26,8 +26,6 @@ public class MonumentsPage {
         LogUtil.log("MonumentsPage initialized");
     }
 
-    /* ===================== Locators ===================== */
-
     @FindBy(xpath = "//span[text()='More']")
     private WebElement moreMenu;
 
@@ -48,8 +46,6 @@ public class MonumentsPage {
 
     @FindBy(xpath = "//div[contains(@class,'tctbx')]")
     private List<WebElement> ticketBoxes;
-
-    /* ===================== Actions ===================== */
 
     public void openMonumentsPage() {
 
@@ -83,8 +79,6 @@ public class MonumentsPage {
         wait.until(ExpectedConditions.elementToBeClickable(ticketsTab)).click();
     }
 
-    /* ===================== Data Getters ===================== */
-
     public int getDisplayedTicketCount() {
         return ticketBoxes.size();
     }
@@ -108,7 +102,7 @@ public class MonumentsPage {
                 .map(box -> box.findElement(
                         By.xpath(".//div[contains(@class,'tctprc')]//span")
                 ).getText().trim())
-                .map(price -> price.replaceAll("\\D", "")) // remove ₹ and text
+                .map(price -> price.replaceAll("\\D", ""))
                 .collect(Collectors.toList());
     }
 }

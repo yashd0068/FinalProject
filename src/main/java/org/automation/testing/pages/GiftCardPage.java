@@ -19,7 +19,7 @@ public class GiftCardPage {
     @FindBy(className = "poplr_gft")
     private WebElement giftCardSection;
 
-    @FindBy(xpath = "//div[contains(@class,'f17')]")
+    @FindBy(xpath = "//div[@id='All']/div/div/div[2]/div")
     private List<WebElement> giftCardNames;
 
     @FindBy(xpath = "//div[@id='All']/div/div[2]/div")

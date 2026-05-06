@@ -50,7 +50,6 @@ public class CabsPage {
         wait.until(ExpectedConditions.elementToBeClickable(fromContainer)).click();
         wait.until(ExpectedConditions.elementToBeClickable(fromInput)).clear();
         fromInput.sendKeys(city);
-
         waitForAutoSuggestToLoad();
         selectCityFromAutoSuggest(city);
     }
@@ -59,7 +58,6 @@ public class CabsPage {
 
         wait.until(ExpectedConditions.elementToBeClickable(toInput)).clear();
         toInput.sendKeys(city);
-
         waitForAutoSuggestToLoad();
         selectCityFromAutoSuggest(city);
     }

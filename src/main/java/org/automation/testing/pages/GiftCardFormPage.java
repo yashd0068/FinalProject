@@ -19,9 +19,6 @@ public class GiftCardFormPage {
     @FindBy(xpath = "//select[@ng-model='User.Quantity']")
     private WebElement quantity;
 
-    @FindBy(id = "rcteml")
-    private WebElement retypeEmail;
-
     @FindBy(id = "pny")
     private WebElement payNow;
 
@@ -39,12 +36,6 @@ public class GiftCardFormPage {
 
     @FindBy(xpath = "//input[@ng-model='User.SenderMobile']")
     private WebElement senderMobile;
-
-    @FindBy(id = "rcnm")
-    private WebElement receiverName;
-
-    @FindBy(xpath = "//input[@ng-model='User.ReceiverEmail']")
-    private WebElement receiverEmail;
 
     @FindBy(xpath = "//span[contains(text(),'Payable Amount')]/following-sibling::span")
     private WebElement payableAmount;
@@ -68,36 +59,10 @@ public class GiftCardFormPage {
         new Select(quantity).selectByVisibleText(value);
     }
 
-    public void enterSenderName(String name) {
-        senderName.clear();
-        senderName.sendKeys(name);
-    }
-
     public void enterSenderEmail(String email) {
         senderEmail.clear();
         senderEmail.sendKeys(email);
         ((JavascriptExecutor) driver).executeScript("arguments[0].blur();", senderEmail);
-    }
-
-    public void enterSenderMobile(String mobile) {
-        senderMobile.clear();
-        senderMobile.sendKeys(mobile);
-    }
-
-    public void enterReceiverName(String name) {
-        receiverName.clear();
-        receiverName.sendKeys(name);
-    }
-
-    public void enterReceiverEmail(String email) {
-        receiverEmail.clear();
-        receiverEmail.sendKeys(email);
-        ((JavascriptExecutor) driver).executeScript("arguments[0].blur();", receiverEmail);
-    }
-
-    public void enterReceiverRetypeEmail(String email) {
-        retypeEmail.clear();
-        retypeEmail.sendKeys(email);
     }
 
     public void clickPayNow() {
@@ -112,40 +77,6 @@ public class GiftCardFormPage {
         return Integer.parseInt(text);
     }
 
-    public boolean isNameValidationErrorDisplayed() {
-        return errorMessages.stream()
-                .anyMatch(e -> e.getText().toLowerCase().contains("name"));
-    }
-
-    public boolean isMobileValidationErrorDisplayed() {
-        return errorMessages.stream()
-                .anyMatch(e -> e.getText().contains("10"));
-    }
-
-    public boolean isOtpMessageDisplayed() {
-        return otpMsg.isDisplayed();
-    }
-
-    public boolean isAnyValidationErrorDisplayed() {
-        boolean errorFound = false;
-        for (WebElement err : errorMessages) {
-            String message = err.getText().trim();
-            if (!message.isEmpty() && err.isDisplayed()) {
-                errorFound = true;
-            }
-        }
-        return errorFound;
-    }
-
-    public boolean isSpecificErrorDisplayed(String expectedMessage) {
-        for (WebElement err : errorMessages) {
-            if (err.getText().trim().equalsIgnoreCase(expectedMessage)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
     public boolean isAmountBoundaryErrorDisplayed() {
         for (WebElement err : errorMessages) {
             String message = err.getText().toLowerCase();
@@ -155,6 +86,7 @@ public class GiftCardFormPage {
         }
         return false;
     }
+
     public String getAmountBoundaryErrorMessage() {
         for (WebElement err : errorMessages) {
             String message = err.getText().trim();
@@ -166,6 +98,7 @@ public class GiftCardFormPage {
         }
         return "No amount boundary error message displayed";
     }
+
     public void fillMandatoryFieldsExceptEmail() {
         enterAmount("500");
         selectQuantity("1");
@@ -173,16 +106,6 @@ public class GiftCardFormPage {
         senderName.sendKeys("TestUser");
         senderMobile.clear();
         senderMobile.sendKeys("9876543210");
-    }
-
-    public boolean isEmailValidationErrorDisplayed() {
-        for (WebElement err : errorMessages) {
-            String msg = err.getText().toLowerCase();
-            if (msg.contains("email") && msg.contains("valid")) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public String getDisplayedFormMessage() {

@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-
 <suite name="EaseMyTrip Automation Suite">
-
-
     <listeners>
         <listener class-name="org.easemytrip.tests.listeners.TestListener"/>
     </listeners>
-
-
     <test name="EaseMyTrip End-to-End Test Cases">
-
         <classes>
-
             <!-- ===================== CABS MODULE ===================== -->
             <class name="org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage"/>
             <class name="org.easemytrip.tests.TC_02_NavigateToCabsAndSelectOutstation"/>

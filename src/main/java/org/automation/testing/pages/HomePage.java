@@ -26,10 +26,12 @@ public class HomePage {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         PageFactory.initElements(driver, this);
     }
+
     public void clickOnGiftCards() {
         wait.until(ExpectedConditions.elementToBeClickable(giftCardLink)).click();
         WindowSwitchUtil.switchToNewWindow(driver);
     }
+
     public void clickOnCabs() {
         wait.until(ExpectedConditions.elementToBeClickable(cabsLink)).click();
     }
