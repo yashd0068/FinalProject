@@ -24,7 +24,6 @@ public class TC_07_DisplayAndCountGiftCards extends BaseClass {
         int cardCount = gift.getGiftCardCount();
         LogUtil.log("Total Gift Cards displayed: " + cardCount);
 
-        // Standard assertion to validate gift cards are displayed
         Assert.assertTrue(
                 cardCount > 0,
                 "Assertion Failed: No gift cards are displayed on the Gift Card page"
@@ -34,6 +33,6 @@ public class TC_07_DisplayAndCountGiftCards extends BaseClass {
         gift.printGiftCardNames();
 
         LogUtil.log("Gift Cards display and count validation successful");
-//        ScreenshotUtil.takeScreenshot(driver, "TC07_DisplayGiftCards");
+
     }
 }

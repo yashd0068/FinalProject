@@ -11,7 +11,6 @@ import java.util.Date;
 
 public class ScreenshotUtil {
 
-    // ✅ Used by BaseClass (passed / failed folders)
     public static void takeScreenshot(WebDriver driver,
                                       String testName,
                                       String testStatus) {
@@ -43,7 +42,6 @@ public class ScreenshotUtil {
         }
     }
 
-    // ✅ Used by Extent Report
     public static String captureScreenshot(WebDriver driver,
                                            String testName) {
 

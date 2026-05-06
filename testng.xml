@@ -16,37 +16,37 @@
             <!-- ===================== CABS MODULE ===================== -->
             <class name="org.easemytrip.tests.TC_01_LaunchAndVerifyHomePage"/>
             <class name="org.easemytrip.tests.TC_02_NavigateToCabsAndSelectOutstation"/>
-            <!--            <class name="org.easemytrip.tests.TC_03_SelectFromAndToCities"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_04_SearchAndApplySUVFilters"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>-->
+            <class name="org.easemytrip.tests.TC_03_SelectFromAndToCities"/>
+            <class name="org.easemytrip.tests.TC_04_SearchAndApplySUVFilters"/>
+            <class name="org.easemytrip.tests.TC_05_FindAndValidateCheapestSUV"/>
 
-            <!--            &lt;!&ndash; ===================== GIFT CARDS MODULE ===================== &ndash;&gt;-->
-            <!--            <class name="org.easemytrip.tests.TC_06_GiftCardPageValidation"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_07_DisplayAndCountGiftCards"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_08_WeddingGiftNavigation"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_09_GiftCardAmountBoundaryValidation"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_10_ValidateInvalidSenderEmail"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_11_ValidateValidSenderEmail"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_12_ValidatePayableAmount"/>-->
+            <!-- ===================== GIFT CARDS MODULE ===================== -->
+            <class name="org.easemytrip.tests.TC_06_GiftCardPageValidation"/>
+            <class name="org.easemytrip.tests.TC_07_DisplayAndCountGiftCards"/>
+            <class name="org.easemytrip.tests.TC_08_WeddingGiftNavigation"/>
+            <class name="org.easemytrip.tests.TC_09_GiftCardAmountBoundaryValidation"/>
+            <class name="org.easemytrip.tests.TC_10_ValidateInvalidSenderEmail"/>
+            <class name="org.easemytrip.tests.TC_11_ValidateValidSenderEmail"/>
+            <class name="org.easemytrip.tests.TC_12_ValidatePayableAmount"/>
 
-            <!--            &lt;!&ndash; ===================== HOTELS / ADULT COUNT MODULE ===================== &ndash;&gt;-->
-            <!--            <class name="org.easemytrip.tests.TC_13_VerifyAdultDropdownOpened"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_14_ExtractAdultCounts"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_15_VerifyAdultNotZero"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_16_IncrementAdultByOne"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_17_IncrementAdultByMultiple"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_18_DecrementAdultByOne"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_19_VerifyAdultDoesNotGoBelowOne"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>-->
+            <!-- ===================== HOTELS / ADULT COUNT MODULE ===================== -->
+            <class name="org.easemytrip.tests.TC_13_VerifyAdultDropdownOpened"/>
+            <class name="org.easemytrip.tests.TC_14_ExtractAdultCounts"/>
+            <class name="org.easemytrip.tests.TC_15_VerifyAdultNotZero"/>
+            <class name="org.easemytrip.tests.TC_16_IncrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_17_IncrementAdultByMultiple"/>
+            <class name="org.easemytrip.tests.TC_18_DecrementAdultByOne"/>
+            <class name="org.easemytrip.tests.TC_19_VerifyAdultDoesNotGoBelowOne"/>
+            <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>
 
-            <!--            &lt;!&ndash; ===================== LOGIN MODULE ===================== &ndash;&gt;-->
-            <!--            <class name="org.easemytrip.tests.TC_21_ValidateInvalidLoginDetails"/>-->
+            <!-- ===================== LOGIN MODULE ===================== -->
+            <class name="org.easemytrip.tests.TC_21_ValidateInvalidLoginDetails"/>
 
-            <!--            &lt;!&ndash; ===================== MONUMENTS MODULE ===================== &ndash;&gt;-->
-            <!--            <class name="org.easemytrip.tests.TC_22_MonumentsNavigationAndWindowHandling"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_23_MonumentSearchAndTicketsFlowTest"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_24_TicketPriceAndVisitorTypeValidationTest"/>-->
-            <!--            <class name="org.easemytrip.tests.TC_25_DuplicateVisitorTypeValidationTest"/>-->
+            <!-- ===================== MONUMENTS MODULE ===================== -->
+            <class name="org.easemytrip.tests.TC_22_MonumentsNavigationAndWindowHandling"/>
+            <class name="org.easemytrip.tests.TC_23_MonumentSearchAndTicketsFlowTest"/>
+            <class name="org.easemytrip.tests.TC_24_TicketPriceAndVisitorTypeValidationTest"/>
+            <class name="org.easemytrip.tests.TC_25_DuplicateVisitorTypeValidationTest"/>
 
         </classes>
     </test>
