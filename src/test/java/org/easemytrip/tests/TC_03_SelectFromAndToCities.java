@@ -5,7 +5,6 @@ import org.automation.testing.pages.CabsPage;
 import org.automation.testing.pages.HomePage;
 import org.automation.testing.utility.ConfigUtility;
 import org.automation.testing.utility.LogUtil;
-import org.automation.testing.utility.ScreenshotUtil;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -17,16 +16,16 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
         HomePage homePage = new HomePage(driver);
         CabsPage cabsPage = new CabsPage(driver);
 
-        LogUtil.log("Clicking on Cabs module");
+        LogUtil.info("Clicking on Cabs module");
         homePage.clickOnCabs();
 
-        LogUtil.log("Selecting Outstation travel type");
+        LogUtil.info("Selecting Outstation travel type");
         cabsPage.selectOutstation();
 
         String fromCity = ConfigUtility.getProperty("fromCity");
         String toCity = ConfigUtility.getProperty("toCity");
 
-        LogUtil.log("Selecting FROM city: " + fromCity);
+        LogUtil.info("Selecting FROM city: " + fromCity);
         cabsPage.selectFromCity(fromCity);
 
         Assert.assertTrue(
@@ -34,7 +33,7 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
                 "FROM city not selected correctly"
         );
 
-        LogUtil.log("Selecting TO city: " + toCity);
+        LogUtil.info("Selecting TO city: " + toCity);
         cabsPage.selectToCity(toCity);
 
         Assert.assertTrue(
@@ -42,6 +41,6 @@ public class TC_03_SelectFromAndToCities extends BaseClass {
                 "TO city not selected correctly"
         );
 
-        LogUtil.log("FROM and TO cities selected successfully");
+        LogUtil.info("FROM and TO cities selected successfully");
     }
 }

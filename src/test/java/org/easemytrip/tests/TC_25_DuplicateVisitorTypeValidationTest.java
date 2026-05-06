@@ -15,7 +15,7 @@ public class TC_25_DuplicateVisitorTypeValidationTest extends BaseClass {
     @Test
     public void validateNoDuplicateVisitorTypes() {
 
-        LogUtil.log("Starting validation for duplicate visitor types in Tickets section");
+        LogUtil.info("Starting validation for duplicate visitor types in Tickets section");
 
         MonumentsPage monumentsPage = new MonumentsPage(driver, wait);
 
@@ -29,13 +29,16 @@ public class TC_25_DuplicateVisitorTypeValidationTest extends BaseClass {
 
         Set<String> uniqueVisitorTypes = new HashSet<>(visitorTypeList);
 
-        LogUtil.log("Total ticket boxes displayed: " + ticketBoxCount);
-        LogUtil.log("Visitor types found (List): " + visitorTypeList);
-        LogUtil.log("Unique visitor types found (Set): " + uniqueVisitorTypes);
+        LogUtil.info("Total ticket boxes displayed: " + ticketBoxCount);
+        LogUtil.info("Visitor types found (List): " + visitorTypeList);
+        LogUtil.info("Unique visitor types found (Set): " + uniqueVisitorTypes);
 
-        Assert.assertEquals(uniqueVisitorTypes.size(), ticketBoxCount,
-                "Duplicate visitor types found in Tickets section");
+        Assert.assertEquals(
+                uniqueVisitorTypes.size(),
+                ticketBoxCount,
+                "Duplicate visitor types found in Tickets section"
+        );
 
-        LogUtil.log("Duplicate visitor type validation completed successfully");
+        LogUtil.info("Duplicate visitor type validation completed successfully");
     }
 }

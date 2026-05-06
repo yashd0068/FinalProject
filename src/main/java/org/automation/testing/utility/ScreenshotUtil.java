@@ -38,7 +38,7 @@ public class ScreenshotUtil {
             FileUtils.copyFile(src, dest);
 
         } catch (Exception e) {
-            LogUtil.log("Screenshot failed: " + e.getMessage());
+            LogUtil.info("Screenshot failed: " + e.getMessage());
         }
     }
 

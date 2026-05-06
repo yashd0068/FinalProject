@@ -15,7 +15,7 @@ public class TC_24_TicketPriceAndVisitorTypeValidationTest extends BaseClass {
     @Test
     public void validateVisitorTypesAndPrices() {
 
-        LogUtil.log("Starting validation of visitor types and ticket prices");
+        LogUtil.info("Starting validation of visitor types and ticket prices");
 
         MonumentsPage monumentsPage = new MonumentsPage(driver, wait);
 
@@ -27,9 +27,9 @@ public class TC_24_TicketPriceAndVisitorTypeValidationTest extends BaseClass {
         List<String> visitorTypes = monumentsPage.getVisitorTypes();
         List<String> prices = monumentsPage.getTicketPrices();
 
-        LogUtil.log("Ticket boxes displayed: " + ticketCount);
-        LogUtil.log("Visitor types found: " + visitorTypes);
-        LogUtil.log("Prices found: " + prices);
+        LogUtil.info("Ticket boxes displayed: " + ticketCount);
+        LogUtil.info("Visitor types found: " + visitorTypes);
+        LogUtil.info("Prices found: " + prices);
 
         Assert.assertTrue(ticketCount > 0,
                 "No ticket boxes displayed");
@@ -51,6 +51,6 @@ public class TC_24_TicketPriceAndVisitorTypeValidationTest extends BaseClass {
         Assert.assertTrue(uniquePrices.contains("550"),
                 "Foreigner ticket price missing");
 
-        LogUtil.log("Visitor type and ticket price validation completed successfully");
+        LogUtil.info("Visitor type and ticket price validation completed successfully");
     }
 }

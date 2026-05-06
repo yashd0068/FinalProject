@@ -11,38 +11,38 @@ public class TC_23_MonumentSearchAndTicketsFlowTest extends BaseClass {
     @Test
     public void validateMonumentSearchAndTicketsFlow() {
 
-        LogUtil.log("Starting monument search and tickets flow validation");
+        LogUtil.info("Starting monument search and tickets flow validation");
 
         MonumentsPage monumentsPage = new MonumentsPage(driver, wait);
 
         monumentsPage.openMonumentsPage();
 
-        LogUtil.log("Searching for Taj Mahal using auto-suggest");
+        LogUtil.info("Searching for Taj Mahal using auto-suggest");
         monumentsPage.searchMonument("taj");
 
-        LogUtil.log("Validating monument page loaded correctly");
+        LogUtil.info("Validating monument page loaded correctly");
         Assert.assertTrue(driver.getTitle().toLowerCase().contains("taj")
                         || driver.getPageSource().contains("Taj"),
                 "Monument details not found after search");
 
-        LogUtil.log("Opening Tickets tab");
+        LogUtil.info("Opening Tickets tab");
         monumentsPage.openTicketsTab();
 
         int ticketCountFirst = monumentsPage.getDisplayedTicketCount();
-        LogUtil.log("Ticket count after first load: " + ticketCountFirst);
+        LogUtil.info("Ticket count after first load: " + ticketCountFirst);
 
         Assert.assertTrue(ticketCountFirst > 0,
                 "Ticket data not loaded");
 
-        LogUtil.log("Re-clicking Tickets tab to validate stability");
+        LogUtil.info("Re-clicking Tickets tab to validate stability");
         monumentsPage.openTicketsTab();
 
         int ticketCountSecond = monumentsPage.getDisplayedTicketCount();
-        LogUtil.log("Ticket count after second load: " + ticketCountSecond);
+        LogUtil.info("Ticket count after second load: " + ticketCountSecond);
 
         Assert.assertEquals(ticketCountSecond, ticketCountFirst,
                 "Ticket data changed on repeated Tickets tab click");
 
-        LogUtil.log("Monument search and tickets flow validated successfully");
+        LogUtil.info("Monument search and tickets flow validated successfully");
     }
 }

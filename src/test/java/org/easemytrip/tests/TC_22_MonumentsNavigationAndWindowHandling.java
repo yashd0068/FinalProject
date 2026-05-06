@@ -13,17 +13,17 @@ public class TC_22_MonumentsNavigationAndWindowHandling extends BaseClass {
     @Test
     public void validateMonumentsNavigationAndWindowHandling() {
 
-        LogUtil.log("Starting Monuments navigation and window handling validation");
+        LogUtil.info("Starting Monuments navigation and window handling validation");
 
         String parentWindow = driver.getWindowHandle();
-        LogUtil.log("Captured parent window handle: " + parentWindow);
+        LogUtil.info("Captured parent window handle: " + parentWindow);
 
         MonumentsPage monumentsPage = new MonumentsPage(driver, wait);
 
         monumentsPage.openMonumentsPage();
 
         Set<String> allWindows = driver.getWindowHandles();
-        LogUtil.log("Total windows opened: " + allWindows.size());
+        LogUtil.info("Total windows opened: " + allWindows.size());
 
         Assert.assertTrue(allWindows.size() > 1,
                 "Monuments page did not open in a new window");
@@ -32,7 +32,7 @@ public class TC_22_MonumentsNavigationAndWindowHandling extends BaseClass {
                 "Driver did not switch to Monuments window");
 
         String pageTitle = driver.getTitle();
-        LogUtil.log("Monuments page title: " + pageTitle);
+        LogUtil.info("Monuments page title: " + pageTitle);
 
         Assert.assertFalse(pageTitle.isEmpty(),
                 "Monuments page title should not be empty");
@@ -40,6 +40,6 @@ public class TC_22_MonumentsNavigationAndWindowHandling extends BaseClass {
         Assert.assertTrue(pageTitle.toLowerCase().contains("monument"),
                 "Incorrect page opened after Monuments navigation");
 
-        LogUtil.log("Monuments navigation and window handling validated successfully");
+        LogUtil.info("Monuments navigation and window handling validated successfully");
     }
 }

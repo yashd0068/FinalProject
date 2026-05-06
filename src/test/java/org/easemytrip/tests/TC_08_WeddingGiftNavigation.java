@@ -14,15 +14,15 @@ public class TC_08_WeddingGiftNavigation extends BaseClass {
 
         HomePage home = new HomePage(driver);
 
-        LogUtil.log("Navigating to Gift Cards page");
+        LogUtil.info("Navigating to Gift Cards page");
         home.clickOnGiftCards();
 
         GiftCardPage gift = new GiftCardPage(driver);
 
-        LogUtil.log("Clicking on Wedding Gift card");
+        LogUtil.info("Clicking on Wedding Gift card");
         gift.clickWeddingGift();
 
-        LogUtil.log("Validating Wedding Gift card form is displayed");
+        LogUtil.info("Validating Wedding Gift card form is displayed");
         String pageSource = driver.getPageSource().toLowerCase();
 
         Assert.assertTrue(
@@ -30,6 +30,6 @@ public class TC_08_WeddingGiftNavigation extends BaseClass {
                 "Assertion Failed: Wedding Gift card form is not displayed after navigation"
         );
 
-        LogUtil.log("Wedding Gift card navigation validated successfully");
+        LogUtil.info("Wedding Gift card navigation validated successfully");
     }
 }

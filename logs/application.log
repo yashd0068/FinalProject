@@ -1,0 +1,300 @@
+2026-05-06 16:59:25 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 16:59:28 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 16:59:28 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 16:59:34 [main] INFO  LogUtil - Verifying application URL
+2026-05-06 16:59:34 [main] INFO  LogUtil - Verifying page title
+2026-05-06 16:59:34 [main] INFO  LogUtil - Verifying page loaded successfully
+2026-05-06 16:59:34 [main] INFO  LogUtil - Home page launched and verified successfully
+2026-05-06 16:59:35 [main] INFO  LogUtil - Screenshot captured for passed test: verifyEaseMyTripHomePage
+2026-05-06 16:59:39 [main] INFO  LogUtil - Browser closed
+2026-05-06 16:59:39 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 16:59:41 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 16:59:41 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 16:59:48 [main] INFO  LogUtil - Clicking on Cabs module
+2026-05-06 16:59:53 [main] INFO  LogUtil - Verifying navigation to Cabs page
+2026-05-06 16:59:53 [main] INFO  LogUtil - Selecting Outstation travel type
+2026-05-06 16:59:53 [main] INFO  LogUtil - Validating Outstation selection
+2026-05-06 16:59:54 [main] INFO  LogUtil - Navigated to Cabs and selected Outstation successfully
+2026-05-06 16:59:54 [main] INFO  LogUtil - Screenshot captured for passed test: navigateToCabsAndSelectOutstation
+2026-05-06 17:00:01 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:00:01 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:00:03 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:00:03 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:00:08 [main] INFO  LogUtil - Clicking on Cabs module
+2026-05-06 17:00:14 [main] INFO  LogUtil - Selecting Outstation travel type
+2026-05-06 17:00:14 [main] INFO  LogUtil - Selecting FROM city: delhi
+2026-05-06 17:00:17 [main] INFO  LogUtil - Selecting TO city: manali
+2026-05-06 17:00:18 [main] INFO  LogUtil - FROM and TO cities selected successfully
+2026-05-06 17:00:18 [main] INFO  LogUtil - Screenshot captured for passed test: selectFromAndToCities
+2026-05-06 17:00:24 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:00:24 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:00:26 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:00:26 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:00:31 [main] INFO  LogUtil - Clicking on Cabs module
+2026-05-06 17:00:37 [main] INFO  LogUtil - Selecting Outstation travel type
+2026-05-06 17:00:37 [main] INFO  LogUtil - Selecting FROM city: delhi
+2026-05-06 17:00:40 [main] INFO  LogUtil - Selecting TO city: manali
+2026-05-06 17:00:42 [main] INFO  LogUtil - Clicking Search button
+2026-05-06 17:00:46 [main] INFO  LogUtil - Applying SUV filters
+2026-05-06 17:00:47 [main] INFO  LogUtil - Validating results page loaded
+2026-05-06 17:00:47 [main] INFO  LogUtil - Search executed and SUV filters applied successfully
+2026-05-06 17:00:47 [main] INFO  LogUtil - Screenshot captured for passed test: searchCabsAndApplySUVFilters
+2026-05-06 17:00:53 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:00:53 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:00:55 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:00:55 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:01:02 [main] INFO  LogUtil - Clicking on Cabs module
+2026-05-06 17:01:07 [main] INFO  LogUtil - Selecting Outstation travel type
+2026-05-06 17:01:08 [main] INFO  LogUtil - Selecting FROM city: delhi
+2026-05-06 17:01:10 [main] INFO  LogUtil - Selecting TO city: manali
+2026-05-06 17:01:11 [main] INFO  LogUtil - Clicking Search button
+2026-05-06 17:01:14 [main] INFO  LogUtil - Applying SUV filters
+2026-05-06 17:01:15 [main] INFO  LogUtil - Fetching cheapest SUV price
+2026-05-06 17:01:15 [main] INFO  LogUtil - Cheapest SUV Price: ₹ 9709
+2026-05-06 17:01:15 [main] INFO  LogUtil - Screenshot captured for passed test: verifyCheapestSUV
+2026-05-06 17:01:22 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:01:22 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:01:24 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:01:24 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:01:29 [main] INFO  LogUtil - Clicking on Gift Cards link
+2026-05-06 17:01:35 [main] INFO  LogUtil - Gift Card Page URL: https://www.easemytrip.com/giftcard/
+2026-05-06 17:01:35 [main] INFO  LogUtil - Gift Card Page Title: Gift Cards - EaseMyTrip
+2026-05-06 17:01:35 [main] INFO  LogUtil - Gift Card page navigation and validation successful
+2026-05-06 17:01:36 [main] INFO  LogUtil - Screenshot captured for passed test: navigateGiftCardPage
+2026-05-06 17:01:42 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:01:42 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:01:44 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:01:44 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:01:49 [main] INFO  LogUtil - Navigating to Gift Cards page
+2026-05-06 17:01:50 [main] INFO  LogUtil - Fetching total number of gift cards
+2026-05-06 17:01:54 [main] INFO  LogUtil - Total Gift Cards displayed: 17
+2026-05-06 17:01:54 [main] INFO  LogUtil - Printing Gift Card names
+2026-05-06 17:01:54 [main] INFO  LogUtil - Gift Cards display and count validation successful
+2026-05-06 17:01:55 [main] INFO  LogUtil - Screenshot captured for passed test: DisplayAndCountGiftCards
+2026-05-06 17:02:01 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:02:01 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:02:03 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:02:04 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:02:09 [main] INFO  LogUtil - Navigating to Gift Cards page
+2026-05-06 17:02:09 [main] INFO  LogUtil - Clicking on Wedding Gift card
+2026-05-06 17:02:22 [main] INFO  LogUtil - Validating Wedding Gift card form is displayed
+2026-05-06 17:02:22 [main] INFO  LogUtil - Wedding Gift card navigation validated successfully
+2026-05-06 17:02:23 [main] INFO  LogUtil - Screenshot captured for passed test: validateWeddingGiftNavigation
+2026-05-06 17:02:29 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:02:29 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:02:31 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:02:32 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:02:39 [main] INFO  LogUtil - Initializing HomePage and navigating to Gift Cards page
+2026-05-06 17:02:39 [main] INFO  LogUtil - Selecting Wedding Gift card
+2026-05-06 17:02:51 [main] INFO  LogUtil - Initializing GiftCardFormPage
+2026-05-06 17:02:51 [main] INFO  LogUtil - Reading boundary test data from Excel
+2026-05-06 17:02:52 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:52 [main] INFO  LogUtil - Executing boundary test with Amount: 499.0
+2026-05-06 17:02:52 [main] INFO  LogUtil - Expected Result: invalid
+2026-05-06 17:02:53 [main] INFO  LogUtil - Actual Result - Error Displayed: true
+2026-05-06 17:02:53 [main] INFO  LogUtil - Error Message: Voucher amount should be between 500 and 50000.
+2026-05-06 17:02:53 [main] INFO  LogUtil - Test Passed for invalid amount: 499.0
+2026-05-06 17:02:53 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:53 [main] INFO  LogUtil - Executing boundary test with Amount: 500.0
+2026-05-06 17:02:53 [main] INFO  LogUtil - Expected Result: valid
+2026-05-06 17:02:54 [main] INFO  LogUtil - Actual Result - Error Displayed: false
+2026-05-06 17:02:54 [main] INFO  LogUtil - Error Message: No error message displayed
+2026-05-06 17:02:54 [main] INFO  LogUtil - Test Passed for valid amount: 500.0
+2026-05-06 17:02:54 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:54 [main] INFO  LogUtil - Executing boundary test with Amount: 501.0
+2026-05-06 17:02:54 [main] INFO  LogUtil - Expected Result: valid
+2026-05-06 17:02:55 [main] INFO  LogUtil - Actual Result - Error Displayed: false
+2026-05-06 17:02:55 [main] INFO  LogUtil - Error Message: No error message displayed
+2026-05-06 17:02:55 [main] INFO  LogUtil - Test Passed for valid amount: 501.0
+2026-05-06 17:02:55 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:55 [main] INFO  LogUtil - Executing boundary test with Amount: 49999.0
+2026-05-06 17:02:55 [main] INFO  LogUtil - Expected Result: valid
+2026-05-06 17:02:55 [main] INFO  LogUtil - Actual Result - Error Displayed: false
+2026-05-06 17:02:55 [main] INFO  LogUtil - Error Message: No error message displayed
+2026-05-06 17:02:55 [main] INFO  LogUtil - Test Passed for valid amount: 49999.0
+2026-05-06 17:02:55 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:55 [main] INFO  LogUtil - Executing boundary test with Amount: 50000.0
+2026-05-06 17:02:55 [main] INFO  LogUtil - Expected Result: valid
+2026-05-06 17:02:56 [main] INFO  LogUtil - Actual Result - Error Displayed: false
+2026-05-06 17:02:56 [main] INFO  LogUtil - Error Message: No error message displayed
+2026-05-06 17:02:56 [main] INFO  LogUtil - Test Passed for valid amount: 50000.0
+2026-05-06 17:02:56 [main] INFO  LogUtil - --------------------------------------------------
+2026-05-06 17:02:56 [main] INFO  LogUtil - Executing boundary test with Amount: 50001.0
+2026-05-06 17:02:56 [main] INFO  LogUtil - Expected Result: invalid
+2026-05-06 17:02:56 [main] INFO  LogUtil - Actual Result - Error Displayed: true
+2026-05-06 17:02:56 [main] INFO  LogUtil - Error Message: Voucher amount should be between 500 and 50000.
+2026-05-06 17:02:56 [main] INFO  LogUtil - Test Passed for invalid amount: 50001.0
+2026-05-06 17:02:56 [main] INFO  LogUtil - Boundary amount validation completed successfully
+2026-05-06 17:02:56 [main] INFO  LogUtil - Screenshot captured for passed test: validateAmountBoundaryValues
+2026-05-06 17:03:02 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:03:02 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:03:04 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:03:04 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:03:11 [main] INFO  LogUtil - Navigating to Gift Cards
+2026-05-06 17:03:11 [main] INFO  LogUtil - Selecting Wedding Gift Card
+2026-05-06 17:03:27 [main] INFO  LogUtil - Reading INVALID email data from Excel
+2026-05-06 17:03:27 [main] INFO  LogUtil - Testing invalid email: usergmail.com
+2026-05-06 17:03:28 [main] INFO  LogUtil - Displayed Message: Email address is required and it should be valid.
+2026-05-06 17:03:28 [main] INFO  LogUtil - Invalid email validation passed
+2026-05-06 17:03:28 [main] INFO  LogUtil - Testing invalid email: user@domain
+2026-05-06 17:03:29 [main] INFO  LogUtil - Displayed Message: Email address is required and it should be valid.
+2026-05-06 17:03:29 [main] INFO  LogUtil - Invalid email validation passed
+2026-05-06 17:03:29 [main] INFO  LogUtil - Invalid sender email test completed
+2026-05-06 17:03:29 [main] INFO  LogUtil - Screenshot captured for passed test: validateInvalidSenderEmail
+2026-05-06 17:03:35 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:03:35 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:03:37 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:03:37 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:03:44 [main] INFO  LogUtil - Navigating to Gift Cards
+2026-05-06 17:03:44 [main] INFO  LogUtil - Selecting Wedding Gift Card
+2026-05-06 17:03:57 [main] INFO  LogUtil - Reading VALID email data from Excel
+2026-05-06 17:03:57 [main] INFO  LogUtil - Testing valid email: user@domain.com
+2026-05-06 17:03:58 [main] INFO  LogUtil - Displayed Message: Receiver name required.
+2026-05-06 17:03:58 [main] INFO  LogUtil - Valid email accepted successfully
+2026-05-06 17:03:58 [main] INFO  LogUtil - Valid sender email test completed
+2026-05-06 17:03:58 [main] INFO  LogUtil - Screenshot captured for passed test: validateValidSenderEmail
+2026-05-06 17:04:04 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:04:04 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:04:07 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:04:07 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:04:27 [main] INFO  LogUtil - Screenshot captured for passed test: validateAndDisplayPayableAmountUsingExcel
+2026-05-06 17:04:34 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:04:34 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:04:37 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:04:37 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:04:49 [main] INFO  LogUtil - Screenshot captured for passed test: verifyAdultDropdownOpenedAndDataIsAccessible
+2026-05-06 17:04:54 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:04:54 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:04:56 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:04:56 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:05:08 [main] INFO  LogUtil - Screenshot captured for passed test: extractAndValidateAdultCounts
+2026-05-06 17:05:14 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:05:14 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:05:17 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:05:17 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:05:29 [main] INFO  LogUtil - Screenshot captured for passed test: verifyAdultCountIsNeverZeroAndConsistent
+2026-05-06 17:05:34 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:05:34 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:05:36 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:05:37 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:05:47 [main] INFO  LogUtil - Screenshot captured for passed test: incrementAdultByOneAndValidateState
+2026-05-06 17:05:52 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:05:52 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:05:55 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:05:55 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:06:07 [main] INFO  LogUtil - Screenshot captured for passed test: incrementAdultByMultipleAndValidateConsistency
+2026-05-06 17:06:14 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:06:14 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:06:16 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:06:16 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:06:27 [main] INFO  LogUtil - Screenshot captured for passed test: decrementAdultByOneAndValidateConsistency
+2026-05-06 17:06:32 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:06:32 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:06:34 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:06:35 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:06:48 [main] INFO  LogUtil - Screenshot captured for passed test: verifyAdultDoesNotGoBelowOneAndStaysStable
+2026-05-06 17:06:54 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:06:54 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:06:57 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:06:57 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:07:08 [main] INFO  LogUtil - Screenshot captured for passed test: validateAdultCountFlowAndBoundaries
+2026-05-06 17:07:14 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:07:14 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:07:16 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:07:16 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:07:22 [main] INFO  LogUtil - Opening login popup
+2026-05-06 17:07:22 [main] INFO  LogUtil - Reading test data from Excel file
+2026-05-06 17:07:22 [main] INFO  LogUtil - -------------------------------------------------
+2026-05-06 17:07:22 [main] INFO  LogUtil - Testing invalid input: 999999
+2026-05-06 17:07:23 [main] INFO  LogUtil - Error message displayed: * Enter a valid Phone Number
+2026-05-06 17:07:23 [main] INFO  LogUtil - -------------------------------------------------
+2026-05-06 17:07:23 [main] INFO  LogUtil - Testing invalid input: 12345abc
+2026-05-06 17:07:24 [main] INFO  LogUtil - Error message displayed: * Enter a valid Email
+2026-05-06 17:07:24 [main] INFO  LogUtil - -------------------------------------------------
+2026-05-06 17:07:24 [main] INFO  LogUtil - Testing invalid input: abc@
+2026-05-06 17:07:25 [main] INFO  LogUtil - Error message displayed: * Enter a valid Email
+2026-05-06 17:07:25 [main] INFO  LogUtil - -------------------------------------------------
+2026-05-06 17:07:25 [main] INFO  LogUtil - Testing invalid input: test@.com
+2026-05-06 17:07:25 [main] INFO  LogUtil - Error message displayed: * Enter a valid Email
+2026-05-06 17:07:25 [main] INFO  LogUtil - Invalid login scenarios validated successfully
+2026-05-06 17:07:26 [main] INFO  LogUtil - Screenshot captured for passed test: verifyInvalidLoginFromExcel
+2026-05-06 17:07:31 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:07:31 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:07:34 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:07:34 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:07:39 [main] INFO  LogUtil - Starting Monuments navigation and window handling validation
+2026-05-06 17:07:39 [main] INFO  LogUtil - Captured parent window handle: F31505350F4096E4278933BCFC713F40
+2026-05-06 17:07:39 [main] INFO  LogUtil - MonumentsPage initialized
+2026-05-06 17:07:39 [main] INFO  LogUtil - Hovering on More menu
+2026-05-06 17:07:39 [main] INFO  LogUtil - Clicking Monuments link
+2026-05-06 17:07:39 [main] INFO  LogUtil - Switching to Monuments window
+2026-05-06 17:07:39 [main] INFO  LogUtil - Total windows opened: 2
+2026-05-06 17:07:57 [main] INFO  LogUtil - Monuments page title: Majestic Monuments of India | History, Cities & Bookings
+2026-05-06 17:07:57 [main] INFO  LogUtil - Monuments navigation and window handling validated successfully
+2026-05-06 17:07:58 [main] INFO  LogUtil - Screenshot captured for passed test: validateMonumentsNavigationAndWindowHandling
+2026-05-06 17:08:09 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:08:09 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:08:11 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:08:11 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:08:18 [main] INFO  LogUtil - Starting monument search and tickets flow validation
+2026-05-06 17:08:18 [main] INFO  LogUtil - MonumentsPage initialized
+2026-05-06 17:08:18 [main] INFO  LogUtil - Hovering on More menu
+2026-05-06 17:08:18 [main] INFO  LogUtil - Clicking Monuments link
+2026-05-06 17:08:19 [main] INFO  LogUtil - Switching to Monuments window
+2026-05-06 17:08:19 [main] INFO  LogUtil - Searching for Taj Mahal using auto-suggest
+2026-05-06 17:08:19 [main] INFO  LogUtil - Typing monument name: taj
+2026-05-06 17:08:48 [main] INFO  LogUtil - Selecting Taj Mahal from auto-suggest
+2026-05-06 17:08:49 [main] INFO  LogUtil - Clicking Search button
+2026-05-06 17:08:49 [main] INFO  LogUtil - Validating monument page loaded correctly
+2026-05-06 17:08:49 [main] INFO  LogUtil - Opening Tickets tab
+2026-05-06 17:08:49 [main] INFO  LogUtil - Opening Tickets tab
+2026-05-06 17:08:50 [main] INFO  LogUtil - Getting displayed ticket count
+2026-05-06 17:08:50 [main] INFO  LogUtil - Ticket count after first load: 4
+2026-05-06 17:08:50 [main] INFO  LogUtil - Re-clicking Tickets tab to validate stability
+2026-05-06 17:08:50 [main] INFO  LogUtil - Opening Tickets tab
+2026-05-06 17:08:50 [main] INFO  LogUtil - Getting displayed ticket count
+2026-05-06 17:08:50 [main] INFO  LogUtil - Ticket count after second load: 4
+2026-05-06 17:08:50 [main] INFO  LogUtil - Monument search and tickets flow validated successfully
+2026-05-06 17:08:51 [main] INFO  LogUtil - Screenshot captured for passed test: validateMonumentSearchAndTicketsFlow
+2026-05-06 17:09:00 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:09:00 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:09:04 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:09:04 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:09:11 [main] INFO  LogUtil - Starting validation of visitor types and ticket prices
+2026-05-06 17:09:11 [main] INFO  LogUtil - MonumentsPage initialized
+2026-05-06 17:09:11 [main] INFO  LogUtil - Hovering on More menu
+2026-05-06 17:09:11 [main] INFO  LogUtil - Clicking Monuments link
+2026-05-06 17:09:12 [main] INFO  LogUtil - Switching to Monuments window
+2026-05-06 17:09:12 [main] INFO  LogUtil - Typing monument name: taj
+2026-05-06 17:09:38 [main] INFO  LogUtil - Selecting Taj Mahal from auto-suggest
+2026-05-06 17:09:39 [main] INFO  LogUtil - Clicking Search button
+2026-05-06 17:09:39 [main] INFO  LogUtil - Opening Tickets tab
+2026-05-06 17:09:39 [main] INFO  LogUtil - Getting displayed ticket count
+2026-05-06 17:09:40 [main] INFO  LogUtil - Fetching visitor types
+2026-05-06 17:09:40 [main] INFO  LogUtil - Fetching ticket prices
+2026-05-06 17:09:40 [main] INFO  LogUtil - Ticket boxes displayed: 4
+2026-05-06 17:09:40 [main] INFO  LogUtil - Visitor types found: [INDIAN Visitor:, SAARC Visitor:, BIMSTEC Visitor:, FOREIGNER Visitor:]
+2026-05-06 17:09:40 [main] INFO  LogUtil - Prices found: [35, 35, 35, 550]
+2026-05-06 17:09:40 [main] INFO  LogUtil - Visitor type and ticket price validation completed successfully
+2026-05-06 17:09:41 [main] INFO  LogUtil - Screenshot captured for passed test: validateVisitorTypesAndPrices
+2026-05-06 17:09:51 [main] INFO  LogUtil - Browser closed
+2026-05-06 17:09:51 [main] INFO  LogUtil - Launching browser: chrome
+2026-05-06 17:09:54 [main] INFO  LogUtil - Chrome browser launched
+2026-05-06 17:09:54 [main] INFO  LogUtil - Navigating to application URL: https://www.easemytrip.com
+2026-05-06 17:10:01 [main] INFO  LogUtil - Starting validation for duplicate visitor types in Tickets section
+2026-05-06 17:10:01 [main] INFO  LogUtil - MonumentsPage initialized
+2026-05-06 17:10:01 [main] INFO  LogUtil - Hovering on More menu
+2026-05-06 17:10:01 [main] INFO  LogUtil - Clicking Monuments link
+2026-05-06 17:10:02 [main] INFO  LogUtil - Switching to Monuments window
+2026-05-06 17:10:02 [main] INFO  LogUtil - Typing monument name: taj
+2026-05-06 17:10:18 [main] INFO  LogUtil - Selecting Taj Mahal from auto-suggest
+2026-05-06 17:10:19 [main] INFO  LogUtil - Clicking Search button
+2026-05-06 17:10:19 [main] INFO  LogUtil - Opening Tickets tab
+2026-05-06 17:10:20 [main] INFO  LogUtil - Getting displayed ticket count
+2026-05-06 17:10:20 [main] INFO  LogUtil - Fetching visitor types
+2026-05-06 17:10:20 [main] INFO  LogUtil - Total ticket boxes displayed: 4
+2026-05-06 17:10:20 [main] INFO  LogUtil - Visitor types found (List): [INDIAN Visitor:, SAARC Visitor:, BIMSTEC Visitor:, FOREIGNER Visitor:]
+2026-05-06 17:10:20 [main] INFO  LogUtil - Unique visitor types found (Set): [FOREIGNER Visitor:, SAARC Visitor:, BIMSTEC Visitor:, INDIAN Visitor:]
+2026-05-06 17:10:20 [main] INFO  LogUtil - Duplicate visitor type validation completed successfully
+2026-05-06 17:10:21 [main] INFO  LogUtil - Screenshot captured for passed test: validateNoDuplicateVisitorTypes
+2026-05-06 17:10:31 [main] INFO  LogUtil - Browser closed

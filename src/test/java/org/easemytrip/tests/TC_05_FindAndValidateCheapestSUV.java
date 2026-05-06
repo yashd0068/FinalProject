@@ -18,31 +18,31 @@ public class TC_05_FindAndValidateCheapestSUV extends BaseClass {
         CabsPage cabs = new CabsPage(driver);
         ResultsPage results = new ResultsPage(driver);
 
-        LogUtil.log("Clicking on Cabs module");
+        LogUtil.info("Clicking on Cabs module");
         home.clickOnCabs();
 
-        LogUtil.log("Selecting Outstation travel type");
+        LogUtil.info("Selecting Outstation travel type");
         cabs.selectOutstation();
 
         String fromCity = ConfigUtility.getProperty("fromCity");
         String toCity = ConfigUtility.getProperty("toCity");
 
-        LogUtil.log("Selecting FROM city: " + fromCity);
+        LogUtil.info("Selecting FROM city: " + fromCity);
         cabs.selectFromCity(fromCity);
 
-        LogUtil.log("Selecting TO city: " + toCity);
+        LogUtil.info("Selecting TO city: " + toCity);
         cabs.selectToCity(toCity);
 
-        LogUtil.log("Clicking Search button");
+        LogUtil.info("Clicking Search button");
         cabs.clickSearch();
 
-        LogUtil.log("Applying SUV filters");
+        LogUtil.info("Applying SUV filters");
         cabs.applySUVFilters();
 
-        LogUtil.log("Fetching cheapest SUV price");
+        LogUtil.info("Fetching cheapest SUV price");
         int lowestPrice = results.getCheapestSUVPrice();
 
-        LogUtil.log("Cheapest SUV Price: ₹ " + lowestPrice);
+        LogUtil.info("Cheapest SUV Price: ₹ " + lowestPrice);
 
         Assert.assertTrue(
                 lowestPrice > 0,

@@ -16,18 +16,18 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
     @Test
     public void validateAmountBoundaryValues() {
 
-        LogUtil.log("Initializing HomePage and navigating to Gift Cards page");
+        LogUtil.info("Initializing HomePage and navigating to Gift Cards page");
         HomePage home = new HomePage(driver);
         home.clickOnGiftCards();
 
-        LogUtil.log("Selecting Wedding Gift card");
+        LogUtil.info("Selecting Wedding Gift card");
         GiftCardPage gift = new GiftCardPage(driver);
         gift.clickWeddingGift();
 
-        LogUtil.log("Initializing GiftCardFormPage");
+        LogUtil.info("Initializing GiftCardFormPage");
         GiftCardFormPage form = new GiftCardFormPage(driver);
 
-        LogUtil.log("Reading boundary test data from Excel");
+        LogUtil.info("Reading boundary test data from Excel");
         List<String[]> data = ExcelReader.readExcelData(
                 "src/test/resources/testData/AmountBoundary.xlsx",
                 "AmountBoundary"
@@ -38,9 +38,9 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
             String amount = row[0];
             String expectedResult = row[1];
 
-            LogUtil.log("--------------------------------------------------");
-            LogUtil.log("Executing boundary test with Amount: " + amount);
-            LogUtil.log("Expected Result: " + expectedResult);
+            LogUtil.info("--------------------------------------------------");
+            LogUtil.info("Executing boundary test with Amount: " + amount);
+            LogUtil.info("Expected Result: " + expectedResult);
 
             form.clearAmount();
             form.enterAmount(amount);
@@ -50,8 +50,8 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
             boolean errorDisplayed = form.isAmountBoundaryErrorDisplayed();
             String errorMessage = errorDisplayed ? form.getAmountBoundaryErrorMessage() : "No error message displayed";
 
-            LogUtil.log("Actual Result - Error Displayed: " + errorDisplayed);
-            LogUtil.log("Error Message: " + errorMessage);
+            LogUtil.info("Actual Result - Error Displayed: " + errorDisplayed);
+            LogUtil.info("Error Message: " + errorMessage);
 
             if (expectedResult.equalsIgnoreCase("valid")) {
 
@@ -60,7 +60,7 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
                         "Validation Failed: Error message displayed for valid amount " + amount
                 );
 
-                LogUtil.log("Test Passed for valid amount: " + amount);
+                LogUtil.info("Test Passed for valid amount: " + amount);
 
             } else {
 
@@ -69,10 +69,10 @@ public class TC_09_GiftCardAmountBoundaryValidation extends BaseClass {
                         "Validation Failed: Error message NOT displayed for invalid amount " + amount
                 );
 
-                LogUtil.log("Test Passed for invalid amount: " + amount);
+                LogUtil.info("Test Passed for invalid amount: " + amount);
             }
         }
 
-        LogUtil.log("Boundary amount validation completed successfully");
+        LogUtil.info("Boundary amount validation completed successfully");
     }
 }

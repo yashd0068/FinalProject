@@ -24,7 +24,7 @@ public class BaseClass {
     public void setUp() {
 
         String browser = ConfigUtility.getProperty("browser").toLowerCase();
-        LogUtil.log("Launching browser: " + browser);
+        LogUtil.info("Launching browser: " + browser);
 
         switch (browser) {
 
@@ -34,7 +34,7 @@ public class BaseClass {
                 edgeOptions.addArguments("--disable-popup-blocking");
                 // edgeOptions.addArguments("--headless=new");
                 driver = new EdgeDriver(edgeOptions);
-                LogUtil.log("Edge browser launched");
+                LogUtil.info("Edge browser launched");
                 break;
 
             case "chrome":
@@ -44,7 +44,7 @@ public class BaseClass {
                 chromeOptions.addArguments("--disable-popup-blocking");
                 // chromeOptions.addArguments("--headless=new");
                 driver = new ChromeDriver(chromeOptions);
-                LogUtil.log("Chrome browser launched");
+                LogUtil.info("Chrome browser launched");
                 break;
         }
 
@@ -54,7 +54,7 @@ public class BaseClass {
         wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
         String url = ConfigUtility.getProperty("url");
-        LogUtil.log("Navigating to application URL: " + url);
+        LogUtil.info("Navigating to application URL: " + url);
         driver.get(url);
     }
 
@@ -67,7 +67,7 @@ public class BaseClass {
                     result.getName(),
                     "passed"
             );
-            LogUtil.log("Screenshot captured for passed test: " + result.getName());
+            LogUtil.info("Screenshot captured for passed test: " + result.getName());
         }
 
         else if (result.getStatus() == ITestResult.FAILURE) {
@@ -76,12 +76,12 @@ public class BaseClass {
                     result.getName(),
                     "failed"
             );
-            LogUtil.log("Screenshot captured for failed test: " + result.getName());
+            LogUtil.info("Screenshot captured for failed test: " + result.getName());
         }
 
         if (driver != null) {
             driver.quit();
-            LogUtil.log("Browser closed");
+            LogUtil.info("Browser closed");
         }
     }
 }

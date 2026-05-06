@@ -16,33 +16,33 @@ public class TC_04_SearchAndApplySUVFilters extends BaseClass {
         HomePage homePage = new HomePage(driver);
         CabsPage cabsPage = new CabsPage(driver);
 
-        LogUtil.log("Clicking on Cabs module");
+        LogUtil.info("Clicking on Cabs module");
         homePage.clickOnCabs();
 
-        LogUtil.log("Selecting Outstation travel type");
+        LogUtil.info("Selecting Outstation travel type");
         cabsPage.selectOutstation();
 
         String fromCity = ConfigUtility.getProperty("fromCity");
         String toCity = ConfigUtility.getProperty("toCity");
 
-        LogUtil.log("Selecting FROM city: " + fromCity);
+        LogUtil.info("Selecting FROM city: " + fromCity);
         cabsPage.selectFromCity(fromCity);
 
-        LogUtil.log("Selecting TO city: " + toCity);
+        LogUtil.info("Selecting TO city: " + toCity);
         cabsPage.selectToCity(toCity);
 
-        LogUtil.log("Clicking Search button");
+        LogUtil.info("Clicking Search button");
         cabsPage.clickSearch();
 
-        LogUtil.log("Applying SUV filters");
+        LogUtil.info("Applying SUV filters");
         cabsPage.applySUVFilters();
 
-        LogUtil.log("Validating results page loaded");
+        LogUtil.info("Validating results page loaded");
         Assert.assertTrue(
                 driver.getPageSource().contains("Book Now"),
                 "Cab results page not loaded"
         );
 
-        LogUtil.log("Search executed and SUV filters applied successfully");
+        LogUtil.info("Search executed and SUV filters applied successfully");
     }
 }

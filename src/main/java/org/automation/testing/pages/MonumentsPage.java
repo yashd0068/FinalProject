@@ -23,7 +23,7 @@ public class MonumentsPage {
         this.driver = driver;
         this.wait = wait;
         PageFactory.initElements(driver, this);
-        LogUtil.log("MonumentsPage initialized");
+        LogUtil.info("MonumentsPage initialized");
     }
 
     @FindBy(xpath = "//span[text()='More']")
@@ -49,43 +49,44 @@ public class MonumentsPage {
 
     public void openMonumentsPage() {
 
-        LogUtil.log("Hovering on More menu");
+        LogUtil.info("Hovering on More menu");
         wait.until(ExpectedConditions.visibilityOf(moreMenu));
         new Actions(driver).moveToElement(moreMenu).perform();
 
-        LogUtil.log("Clicking Monuments link");
+        LogUtil.info("Clicking Monuments link");
         wait.until(ExpectedConditions.elementToBeClickable(monumentsLink)).click();
 
-        LogUtil.log("Switching to Monuments window");
+        LogUtil.info("Switching to Monuments window");
         WindowSwitchUtil.switchToNewWindow(driver);
     }
 
     public void searchMonument(String monumentName) {
 
-        LogUtil.log("Typing monument name: " + monumentName);
+        LogUtil.info("Typing monument name: " + monumentName);
         wait.until(ExpectedConditions.visibilityOf(searchBox));
         searchBox.clear();
         searchBox.sendKeys(monumentName);
 
-        LogUtil.log("Selecting Taj Mahal from auto-suggest");
+        LogUtil.info("Selecting Taj Mahal from auto-suggest");
         wait.until(ExpectedConditions.elementToBeClickable(tajMahalSuggestion)).click();
 
-        LogUtil.log("Clicking Search button");
+        LogUtil.info("Clicking Search button");
         wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }
 
     public void openTicketsTab() {
-        LogUtil.log("Opening Tickets tab");
+        LogUtil.info("Opening Tickets tab");
         wait.until(ExpectedConditions.elementToBeClickable(ticketsTab)).click();
     }
 
     public int getDisplayedTicketCount() {
+        LogUtil.info("Getting displayed ticket count");
         return ticketBoxes.size();
     }
 
     public List<String> getVisitorTypes() {
 
-        LogUtil.log("Fetching visitor types");
+        LogUtil.info("Fetching visitor types");
 
         return ticketBoxes.stream()
                 .map(box -> box.findElement(
@@ -96,7 +97,7 @@ public class MonumentsPage {
 
     public List<String> getTicketPrices() {
 
-        LogUtil.log("Fetching ticket prices");
+        LogUtil.info("Fetching ticket prices");
 
         return ticketBoxes.stream()
                 .map(box -> box.findElement(

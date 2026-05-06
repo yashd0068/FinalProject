@@ -15,20 +15,20 @@ public class TC_02_NavigateToCabsAndSelectOutstation extends BaseClass {
         HomePage homePage = new HomePage(driver);
         CabsPage cabsPage = new CabsPage(driver);
 
-        LogUtil.log("Clicking on Cabs module");
+        LogUtil.info("Clicking on Cabs module");
         homePage.clickOnCabs();
 
-        LogUtil.log("Verifying navigation to Cabs page");
+        LogUtil.info("Verifying navigation to Cabs page");
         Assert.assertTrue(driver.getCurrentUrl().contains("cabs"),
                 "Cabs page navigation failed");
 
-        LogUtil.log("Selecting Outstation travel type");
+        LogUtil.info("Selecting Outstation travel type");
         cabsPage.selectOutstation();
 
-        LogUtil.log("Validating Outstation selection");
+        LogUtil.info("Validating Outstation selection");
         Assert.assertTrue(driver.getPageSource().toLowerCase().contains("outstation"),
                 "Outstation option not selected");
 
-        LogUtil.log("Navigated to Cabs and selected Outstation successfully");
+        LogUtil.info("Navigated to Cabs and selected Outstation successfully");
     }
 }

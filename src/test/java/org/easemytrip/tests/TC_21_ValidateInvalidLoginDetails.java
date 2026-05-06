@@ -21,7 +21,7 @@ public class TC_21_ValidateInvalidLoginDetails extends BaseClass {
         loginPage = new LoginPage(driver, wait);
         softAssert = new SoftAssert();
 
-        LogUtil.log("Opening login popup");
+        LogUtil.info("Opening login popup");
         loginPage.openLoginPopup();
     }
 
@@ -29,7 +29,7 @@ public class TC_21_ValidateInvalidLoginDetails extends BaseClass {
     public void verifyInvalidLoginFromExcel() {
 
         String excelPath = "src/test/resources/testData/InvalidLoginData.xlsx";
-        LogUtil.log("Reading test data from Excel file");
+        LogUtil.info("Reading test data from Excel file");
 
         List<String[]> testData =
                 ExcelReader.readExcelData(excelPath, "InvalidLogin");
@@ -39,14 +39,14 @@ public class TC_21_ValidateInvalidLoginDetails extends BaseClass {
             String inputValue = data[0];
             String expectedKeyword = data[1];
 
-            LogUtil.log("-------------------------------------------------");
-            LogUtil.log("Testing invalid input: " + inputValue);
+            LogUtil.info("-------------------------------------------------");
+            LogUtil.info("Testing invalid input: " + inputValue);
 
             loginPage.enterValue(inputValue);
             loginPage.clickContinue();
 
             String actualError = loginPage.getErrorMessage();
-            LogUtil.log("Error message displayed: " + actualError);
+            LogUtil.info("Error message displayed: " + actualError);
 
             softAssert.assertTrue(
                     actualError.toLowerCase().contains(expectedKeyword.toLowerCase()),
@@ -59,6 +59,6 @@ public class TC_21_ValidateInvalidLoginDetails extends BaseClass {
         }
 
         softAssert.assertAll();
-        LogUtil.log("Invalid login scenarios validated successfully");
+        LogUtil.info("Invalid login scenarios validated successfully");
     }
 }

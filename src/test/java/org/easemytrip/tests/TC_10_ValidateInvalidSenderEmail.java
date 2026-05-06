@@ -18,17 +18,17 @@ public class TC_10_ValidateInvalidSenderEmail extends BaseClass {
 
         SoftAssert softAssert = new SoftAssert();
 
-        LogUtil.log("Navigating to Gift Cards");
+        LogUtil.info("Navigating to Gift Cards");
         HomePage home = new HomePage(driver);
         home.clickOnGiftCards();
 
-        LogUtil.log("Selecting Wedding Gift Card");
+        LogUtil.info("Selecting Wedding Gift Card");
         GiftCardPage gift = new GiftCardPage(driver);
         gift.clickWeddingGift();
 
         GiftCardFormPage form = new GiftCardFormPage(driver);
 
-        LogUtil.log("Reading INVALID email data from Excel");
+        LogUtil.info("Reading INVALID email data from Excel");
         List<String[]> data = ExcelReader.readExcelData(
                 "src/test/resources/testData/GiftCard_InputValidation.xlsx",
                 "EmailValidation"
@@ -43,24 +43,24 @@ public class TC_10_ValidateInvalidSenderEmail extends BaseClass {
                 continue;
             }
 
-            LogUtil.log("Testing invalid email: " + email);
+            LogUtil.info("Testing invalid email: " + email);
 
             form.fillMandatoryFieldsExceptEmail();
             form.enterSenderEmail(email);
             form.clickPayNow();
 
             String message = form.getDisplayedFormMessage();
-            LogUtil.log("Displayed Message: " + message);
+            LogUtil.info("Displayed Message: " + message);
 
             softAssert.assertTrue(
                     message.toLowerCase().contains("email"),
                     "Error message not shown for invalid email: " + email
             );
 
-            LogUtil.log("Invalid email validation passed");
+            LogUtil.info("Invalid email validation passed");
         }
 
         softAssert.assertAll();
-        LogUtil.log("Invalid sender email test completed");
+        LogUtil.info("Invalid sender email test completed");
     }
 }

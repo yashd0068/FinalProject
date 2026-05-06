@@ -10,7 +10,7 @@ public class ConfigUtility {
     static {
         try {
             FileInputStream fis =
-                    new FileInputStream("src/test/resources/testData/config.properties");
+                    new FileInputStream("src/test/resources/config.properties");
             prop = new Properties();
             prop.load(fis);
         } catch (Exception e) {
