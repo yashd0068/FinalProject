@@ -75,8 +75,26 @@ public class MonumentsPage {
     }
 
     public void openTicketsTab() {
+
         LogUtil.info("Opening Tickets tab");
-        wait.until(ExpectedConditions.elementToBeClickable(ticketsTab)).click();
+
+        // 1. Ensure Tickets tab is visible
+        wait.until(ExpectedConditions.visibilityOf(ticketsTab));
+
+        // 2. Scroll into center of viewport (important for CI)
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "arguments[0].scrollIntoView({block:'center'});",
+                ticketsTab
+        );
+
+        // 3. Wait until Selenium considers it clickable
+        wait.until(ExpectedConditions.elementToBeClickable(ticketsTab));
+
+        // 4. Click using JavaScript to avoid overlay / animation issues
+        ((org.openqa.selenium.JavascriptExecutor) driver).executeScript(
+                "arguments[0].click();",
+                ticketsTab
+        );
     }
 
     public int getDisplayedTicketCount() {

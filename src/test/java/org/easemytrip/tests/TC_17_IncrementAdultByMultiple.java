@@ -15,7 +15,6 @@ public class TC_17_IncrementAdultByMultiple extends BaseClass {
         HotelsPage hotels = new HotelsPage(driver);
 
         hotels.openHotels();
-        hotels.openAdultDropdown();
 
         int initialCount = hotels.getAdultCount();
         Assert.assertTrue(initialCount >= 1,

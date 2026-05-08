@@ -15,7 +15,6 @@ public class TC_14_ExtractAdultCounts extends BaseClass {
         HotelsPage hotels = new HotelsPage(driver);
 
         hotels.openHotels();
-        hotels.openAdultDropdown();
 
         List<Integer> adultCounts = hotels.getAllAdultCounts();
 

@@ -15,7 +15,6 @@ public class TC_13_VerifyAdultDropdownOpened extends BaseClass {
         HotelsPage hotels = new HotelsPage(driver);
 
         hotels.openHotels();
-        hotels.openAdultDropdown();
 
         int primaryAdultCount = hotels.getAdultCount();
         Assert.assertTrue(primaryAdultCount >= 1,

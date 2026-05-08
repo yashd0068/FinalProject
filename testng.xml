@@ -29,8 +29,8 @@
             <class name="org.easemytrip.tests.TC_16_IncrementAdultByOne"/>
             <class name="org.easemytrip.tests.TC_17_IncrementAdultByMultiple"/>
             <class name="org.easemytrip.tests.TC_18_DecrementAdultByOne"/>
-            <class name="org.easemytrip.tests.TC_19_VerifyAdultDoesNotGoBelowOne"/>
-            <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>
+           <class name="org.easemytrip.tests.TC_19_VerifyAdultDoesNotGoBelowOne"/>
+           <class name="org.easemytrip.tests.TC_20_ValidateFinalAdultCount"/>
 
             <!-- ===================== LOGIN MODULE ===================== -->
             <class name="org.easemytrip.tests.TC_21_ValidateInvalidLoginDetails"/>

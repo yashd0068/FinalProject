@@ -15,7 +15,6 @@ public class TC_15_VerifyAdultNotZero extends BaseClass {
         HotelsPage hotels = new HotelsPage(driver);
 
         hotels.openHotels();
-        hotels.openAdultDropdown();
 
         int initialCount = hotels.getAdultCount();
         Assert.assertTrue(initialCount > 0,

@@ -15,7 +15,6 @@ public class TC_19_VerifyAdultDoesNotGoBelowOne extends BaseClass {
         HotelsPage hotels = new HotelsPage(driver);
 
         hotels.openHotels();
-        hotels.openAdultDropdown();
 
         int defaultCount = hotels.getAdultCount();
         Assert.assertTrue(
