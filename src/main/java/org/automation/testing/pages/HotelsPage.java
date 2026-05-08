@@ -55,7 +55,6 @@ public class HotelsPage {
         return wait.until(driver -> {
             String text = adultCount.getText().trim();
 
-            // Fallback for Jenkins / slow DOM updates
             if (text.isEmpty()) {
                 text = adultCount.getAttribute("textContent").trim();
             }
@@ -63,7 +62,7 @@ public class HotelsPage {
             if (text.matches("\\d+")) {
                 return Integer.parseInt(text);
             }
-            return null; // keep waiting
+            return null;
         });
     }
 
@@ -77,7 +76,6 @@ public class HotelsPage {
 
             String text = el.getText().trim();
 
-            // Ignore placeholders / empty spans
             if (text.matches("\\d+")) {
                 values.add(Integer.parseInt(text));
             }
